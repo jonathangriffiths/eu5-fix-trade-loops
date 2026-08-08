@@ -1,10 +1,10 @@
-{
+﻿{
 	"name":	"Trading loops begone",
 	"id":	"trading_loops_begone",
 	"version":	"1.0",
-	"supported_game_version":	"1.3",
-	"short_description":	"Fix trading loops by moving sell efficiency to trading profit",
-	"tags":	["Balance"],
+	"supported_game_version":	"1.3.11",
+	"short_description":	"Fix trading loops by moving sell efficiency modifiers to trading profit modifiers",
+	"tags":	["Balance", "Fixes", "Gameplay", "Trade and Economics"],
 	"relationships":	[],
 	"game_custom_data":	{
 }
