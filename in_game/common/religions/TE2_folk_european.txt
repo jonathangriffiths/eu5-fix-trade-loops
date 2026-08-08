@@ -1,3 +1,5 @@
 INJECT:obian_paganism = {
-	trade_income = 0.025
+	definition_modifier = {
+		trade_income = small_trade_income_bonus
+	}
 }

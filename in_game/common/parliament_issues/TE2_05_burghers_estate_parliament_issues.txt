@@ -1,3 +1,5 @@
 INJECT:protect_our_market = {
-	trade_income = 0.01
+	modifier_when_in_debate = {
+		trade_income = tiny_trade_income_bonus
+	}
 }

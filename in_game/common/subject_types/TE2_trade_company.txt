@@ -1,3 +1,5 @@
 INJECT:trade_company = {
-	trade_income = 0.01
+	subject_modifier = {
+		trade_income = tiny_trade_income_bonus
+	}
 }

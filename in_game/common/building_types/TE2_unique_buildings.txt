@@ -1,3 +1,5 @@
 INJECT:porto_pisano = {
-	trade_income = 0.01
+	capital_country_modifier = {
+		trade_income = tiny_trade_income_bonus
+	}
 }

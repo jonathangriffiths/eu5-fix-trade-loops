@@ -1,7 +1,7 @@
 INJECT:guelphs_sanction_emperor_modifier = {
-	trade_income = -0.01
+	trade_income = tiny_trade_income_penalty
 }
 
 INJECT:ghibellines_sanction_pope_modifier = {
-	trade_income = -0.01
+	trade_income = tiny_trade_income_penalty
 }

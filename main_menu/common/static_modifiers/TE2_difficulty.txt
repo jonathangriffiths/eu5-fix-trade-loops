@@ -1,19 +1,19 @@
 INJECT:difficulty_player_very_easy = {
-	trade_income = 0.1
+	trade_income = large_trade_income_bonus
 }
 
 INJECT:difficulty_player_easy = {
-	trade_income = 0.05
+	trade_income = medium_trade_income_bonus
 }
 
 INJECT:difficulty_ai_normal = {
-	trade_income = 0.025
+	trade_income = small_trade_income_bonus
 }
 
 INJECT:difficulty_ai_hard = {
-	trade_income = 0.05
+	trade_income = medium_trade_income_bonus
 }
 
 INJECT:difficulty_ai_very_hard = {
-	trade_income = 0.1
+	trade_income = large_trade_income_bonus
 }

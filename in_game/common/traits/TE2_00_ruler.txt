@@ -1,3 +1,5 @@
 INJECT:entrepreneur = {
-	trade_income = 0.025
+	modifier = {
+		trade_income = small_trade_income_bonus
+	}
 }

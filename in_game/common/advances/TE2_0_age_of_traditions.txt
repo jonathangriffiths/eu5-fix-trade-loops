@@ -1,7 +1,7 @@
 INJECT:trade_advance_age_of_trad = {
-	trade_income = 0.025
+	trade_income = small_trade_income_bonus
 }
 
 INJECT:talented_traders = {
-	trade_income = 0.025
+	trade_income = small_trade_income_bonus
 }

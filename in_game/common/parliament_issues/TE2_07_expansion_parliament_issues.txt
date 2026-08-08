@@ -1,11 +1,17 @@
 INJECT:establish_import_controls = {
-	trade_income = 0.01
+	modifier_when_in_debate = {
+		trade_income = tiny_trade_income_bonus
+	}
 }
 
 INJECT:establish_commodity_exchange = {
-	trade_income = 0.01
+	modifier_when_in_debate = {
+		trade_income = tiny_trade_income_bonus
+	}
 }
 
 INJECT:establish_customs_houses = {
-	trade_income = 0.01
+	modifier_when_in_debate = {
+		trade_income = tiny_trade_income_bonus
+	}
 }

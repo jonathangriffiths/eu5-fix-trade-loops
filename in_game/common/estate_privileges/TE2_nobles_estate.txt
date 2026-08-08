@@ -1,3 +1,5 @@
 INJECT:office_of_the_farima_soura_privilege = {
-	trade_income = 0.01
+	country_modifier = {
+		trade_income = tiny_trade_income_bonus
+	}
 }

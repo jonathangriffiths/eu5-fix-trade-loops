@@ -1,15 +1,23 @@
 INJECT:kor_daedongbeob = {
-	trade_income = 0.025
+	country_modifier = {
+		trade_income = small_trade_income_bonus
+	}
 }
 
 INJECT:kor_sadae_reform = {
-	trade_income = 0.05
+	country_modifier = {
+		trade_income = medium_trade_income_bonus
+	}
 }
 
 INJECT:dutch_republic_reform = {
-	trade_income = 0.025
+	country_modifier = {
+		trade_income = small_trade_income_bonus
+	}
 }
 
 INJECT:shahana_i_mandi = {
-	trade_income = 0.025
+	country_modifier = {
+		trade_income = small_trade_income_bonus
+	}
 }

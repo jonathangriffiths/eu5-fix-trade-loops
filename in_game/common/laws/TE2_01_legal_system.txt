@@ -1,3 +1,5 @@
 INJECT:shafii_policy = {
-	trade_income = 0.025
+	country_modifier = {
+		trade_income = small_trade_income_bonus
+	}
 }

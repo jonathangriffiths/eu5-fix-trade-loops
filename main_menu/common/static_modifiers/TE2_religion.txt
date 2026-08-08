@@ -1,7 +1,7 @@
 INJECT:tepeilhuitl_mass = {
-	trade_income = 0.025
+	trade_income = small_trade_income_bonus
 }
 
 INJECT:tepeilhuitl_gr = {
-	trade_income = 0.01
+	trade_income = tiny_trade_income_bonus
 }

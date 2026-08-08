@@ -1,3 +1,3 @@
 INJECT:sic_the_marsala_wine_industry = {
-	trade_income = 0.05
+	trade_income = medium_trade_income_bonus
 }

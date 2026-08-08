@@ -1,15 +1,23 @@
 INJECT:inuit_religion = {
-	trade_income = 0.025
+	definition_modifier = {
+		trade_income = small_trade_income_bonus
+	}
 }
 
 INJECT:dene_religion = {
-	trade_income = 0.025
+	definition_modifier = {
+		trade_income = small_trade_income_bonus
+	}
 }
 
 INJECT:midewiwin_religion = {
-	trade_income = 0.025
+	definition_modifier = {
+		trade_income = small_trade_income_bonus
+	}
 }
 
 INJECT:totemism = {
-	trade_income = 0.025
+	definition_modifier = {
+		trade_income = small_trade_income_bonus
+	}
 }

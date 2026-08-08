@@ -1,7 +1,7 @@
 INJECT:byzantine_market_dominance_modifier = {
-	trade_income = 0.05
+	trade_income = medium_trade_income_bonus
 }
 
 INJECT:italian_merchant_taxes_modifier = {
-	trade_income = 0.025
+	trade_income = small_trade_income_bonus
 }

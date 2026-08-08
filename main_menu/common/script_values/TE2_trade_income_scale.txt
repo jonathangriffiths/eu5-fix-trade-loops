@@ -1,0 +1,26 @@
+# Fix Trading Loops - tunable balance constants
+#
+# Every INJECT across this mod that compensates a removed trade_efficiency
+# bonus/penalty (see default_values.txt, where tiny/small/medium/large/huge
+# _trade_efficiency_bonus/penalty are all zeroed) references one of the
+# named values below instead of a hardcoded number. Change a value here and
+# every object that uses that tier updates together - no need to hunt
+# through advances/laws/buildings/etc. individually.
+#
+# Tiers intentionally mirror vanilla's own tiny/small/medium/large/huge
+# trade_efficiency scale (same magnitudes), just renamed to trade_income.
+
+tiny_trade_income_bonus = 0.01
+small_trade_income_bonus = 0.025
+medium_trade_income_bonus = 0.05
+large_trade_income_bonus = 0.1
+huge_trade_income_bonus = 0.2
+
+tiny_trade_income_penalty = -0.01
+small_trade_income_penalty = -0.025
+medium_trade_income_penalty = -0.05
+large_trade_income_penalty = -0.1
+huge_trade_income_penalty = -0.2
+
+# Matches vanilla's scaled_trade_efficiency_penalty (auto_modifiers/country.txt).
+scaled_trade_income_penalty = -0.01

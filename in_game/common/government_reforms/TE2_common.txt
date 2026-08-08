@@ -1,3 +1,5 @@
 INJECT:state_sponsored_markets = {
-	trade_income = 0.05
+	country_modifier = {
+		trade_income = medium_trade_income_bonus
+	}
 }

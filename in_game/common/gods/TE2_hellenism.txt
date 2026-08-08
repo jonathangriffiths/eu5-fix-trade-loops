@@ -1,3 +1,5 @@
 INJECT:giver_of_wealth_omen = {
-	trade_income = 0.05
+	country_modifier = {
+		trade_income = medium_trade_income_bonus
+	}
 }

@@ -1,7 +1,11 @@
 INJECT:black_market_consortium = {
-	trade_income = 0.025
+	country_modifier = {
+		trade_income = small_trade_income_bonus
+	}
 }
 
 INJECT:regulated_gold_export = {
-	trade_income = 0.01
+	country_modifier = {
+		trade_income = tiny_trade_income_bonus
+	}
 }
