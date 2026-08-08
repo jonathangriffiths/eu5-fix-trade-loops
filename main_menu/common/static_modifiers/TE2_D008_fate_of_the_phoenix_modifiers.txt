@@ -1,0 +1,7 @@
+INJECT:byzantine_market_dominance_modifier = {
+	trade_income = 0.05
+}
+
+INJECT:italian_merchant_taxes_modifier = {
+	trade_income = 0.025
+}

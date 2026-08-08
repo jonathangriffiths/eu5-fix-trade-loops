@@ -1,0 +1,3 @@
+INJECT:lombard_silk_masters = {
+	trade_income = 0.025
+}

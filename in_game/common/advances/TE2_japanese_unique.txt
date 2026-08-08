@@ -1,0 +1,3 @@
+INJECT:img_supreme_ruler_of_tokaido = {
+	trade_income = 0.05
+}

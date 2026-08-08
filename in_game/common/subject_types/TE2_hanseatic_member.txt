@@ -1,0 +1,3 @@
+INJECT:hanseatic_member = {
+	trade_income = 0.025
+}

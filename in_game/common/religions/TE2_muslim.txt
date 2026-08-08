@@ -1,0 +1,3 @@
+INJECT:sunni = {
+	trade_income = 0.01
+}

@@ -1,0 +1,3 @@
+INJECT:sca_sound_toll = {
+	trade_income = 0.05
+}

@@ -1,0 +1,7 @@
+INJECT:pis_maritimes_legacy = {
+	trade_income = 0.05
+}
+
+INJECT:flo_florentine_merchant_houses = {
+	trade_income = 0.05
+}

@@ -1,0 +1,3 @@
+INJECT:gra_adaptative_trade = {
+	trade_income = 0.025
+}

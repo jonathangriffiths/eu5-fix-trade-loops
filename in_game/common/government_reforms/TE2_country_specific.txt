@@ -1,0 +1,15 @@
+INJECT:kor_daedongbeob = {
+	trade_income = 0.025
+}
+
+INJECT:kor_sadae_reform = {
+	trade_income = 0.05
+}
+
+INJECT:dutch_republic_reform = {
+	trade_income = 0.025
+}
+
+INJECT:shahana_i_mandi = {
+	trade_income = 0.025
+}

@@ -1,0 +1,19 @@
+INJECT:french_far_east_ambitions = {
+	trade_income = 0.025
+}
+
+INJECT:french_east_india_company = {
+	trade_income = 0.05
+}
+
+INJECT:state_controlled_amber_gathering = {
+	trade_income = 0.01
+}
+
+INJECT:apc_mazumdar_focus_policy = {
+	trade_income = 0.025
+}
+
+INJECT:kor_chinese_currency = {
+	trade_income = 0.025
+}

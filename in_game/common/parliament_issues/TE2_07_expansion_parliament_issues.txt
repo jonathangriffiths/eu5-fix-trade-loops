@@ -1,0 +1,11 @@
+INJECT:establish_import_controls = {
+	trade_income = 0.01
+}
+
+INJECT:establish_commodity_exchange = {
+	trade_income = 0.01
+}
+
+INJECT:establish_customs_houses = {
+	trade_income = 0.01
+}

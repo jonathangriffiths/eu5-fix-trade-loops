@@ -1,0 +1,3 @@
+INJECT:trade_company = {
+	trade_income = 0.01
+}

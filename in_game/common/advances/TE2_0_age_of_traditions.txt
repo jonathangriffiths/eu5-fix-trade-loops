@@ -1,0 +1,7 @@
+INJECT:trade_advance_age_of_trad = {
+	trade_income = 0.025
+}
+
+INJECT:talented_traders = {
+	trade_income = 0.025
+}

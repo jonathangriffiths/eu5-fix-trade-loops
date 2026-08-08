@@ -1,0 +1,3 @@
+INJECT:giver_of_wealth_omen = {
+	trade_income = 0.05
+}

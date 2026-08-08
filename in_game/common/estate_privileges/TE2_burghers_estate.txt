@@ -1,0 +1,27 @@
+INJECT:novgorod_ivans_hundred = {
+	trade_income = 0.025
+}
+
+INJECT:kbo_lake_chad_trade_privilege = {
+	trade_income = 0.01
+}
+
+INJECT:noble_patronage = {
+	trade_income = 0.01
+}
+
+INJECT:polish_merchant_seal = {
+	trade_income = 0.01
+}
+
+INJECT:fra_leadership_of_marcel = {
+	trade_income = 0.025
+}
+
+INJECT:consolidated_corruption_of_the_burghers = {
+	trade_income = -0.1
+}
+
+INJECT:mam_muhtasibs = {
+	trade_income = 0.01
+}

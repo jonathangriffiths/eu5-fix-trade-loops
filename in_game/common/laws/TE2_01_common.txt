@@ -1,0 +1,7 @@
+INJECT:black_market_consortium = {
+	trade_income = 0.025
+}
+
+INJECT:regulated_gold_export = {
+	trade_income = 0.01
+}

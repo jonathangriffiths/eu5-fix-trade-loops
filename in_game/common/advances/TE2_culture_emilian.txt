@@ -1,0 +1,7 @@
+INJECT:blg_la_grasa = {
+	trade_income = 0.025
+}
+
+INJECT:par_prosciutto_e_parmigiano = {
+	trade_income = 0.05
+}

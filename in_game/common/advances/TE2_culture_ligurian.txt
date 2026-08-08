@@ -1,0 +1,3 @@
+INJECT:ligurian_coastal_seafarers = {
+	trade_income = 0.025
+}

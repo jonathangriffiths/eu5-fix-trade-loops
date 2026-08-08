@@ -1,0 +1,15 @@
+INJECT:rice_based_tax = {
+	trade_income = 0.025
+}
+
+INJECT:allow_trade = {
+	trade_income = 0.025
+}
+
+INJECT:haijin_policy = {
+	trade_income = -0.1
+}
+
+INJECT:increase_tariff_control_decree = {
+	trade_income = 0.025
+}

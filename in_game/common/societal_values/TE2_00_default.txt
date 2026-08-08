@@ -1,0 +1,15 @@
+INJECT:aristocracy_vs_plutocracy_right_modifier = {
+	trade_income = 0.025
+}
+
+INJECT:mercantilism_vs_free_trade_left_modifier = {
+	trade_income = 0.025
+}
+
+INJECT:mercantilism_vs_free_trade_right_modifier = {
+	trade_income = -0.025
+}
+
+INJECT:latinization_vs_hellenization_left_modifier = {
+	trade_income = 0.025
+}

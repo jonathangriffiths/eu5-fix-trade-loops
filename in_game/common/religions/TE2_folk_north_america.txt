@@ -1,0 +1,15 @@
+INJECT:inuit_religion = {
+	trade_income = 0.025
+}
+
+INJECT:dene_religion = {
+	trade_income = 0.025
+}
+
+INJECT:midewiwin_religion = {
+	trade_income = 0.025
+}
+
+INJECT:totemism = {
+	trade_income = 0.025
+}
