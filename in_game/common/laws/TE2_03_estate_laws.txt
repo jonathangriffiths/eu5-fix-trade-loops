@@ -1,5 +1,7 @@
-INJECT:strengthen_burghers_rights_policy = {
-	country_modifier = {
-		trade_income = small_trade_income_bonus
+INJECT:burghers_rights_laws = {
+	strengthen_burghers_rights_policy = {
+		country_modifier = {
+			trade_income = small_trade_income_bonus
+		}
 	}
 }

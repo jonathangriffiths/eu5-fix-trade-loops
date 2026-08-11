@@ -1,5 +1,7 @@
-INJECT:ara_consulate_sea = {
-	country_modifier = {
-		trade_income = small_trade_income_bonus
+INJECT:maritime_law = {
+	ara_consulate_sea = {
+		country_modifier = {
+			trade_income = small_trade_income_bonus
+		}
 	}
 }

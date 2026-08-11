@@ -1,5 +1,7 @@
-INJECT:chinese_tribute_policy = {
-	country_modifier = {
-		trade_income = tiny_trade_income_bonus
+INJECT:trade_relations = {
+	chinese_tribute_policy = {
+		country_modifier = {
+			trade_income = tiny_trade_income_bonus
+		}
 	}
 }

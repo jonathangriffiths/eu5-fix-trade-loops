@@ -16,8 +16,14 @@ nests every injection at the correct depth, fixes 4 fabricated target names (and
 bonus/penalty signs) in the societal values file, and moves every hardcoded number into
 `main_menu/common/script_values/TE2_trade_income_scale.txt` so tuning is a one-line change.
 
-Also I centralised the values to a single location (`main_menu/common/script_values/TE2_trade_income_scale.txt`)
-so that you can more easily tweak this mod if you would like.
+**Second bug (found via the game's `error.log`):** 16 `INJECT:` targets named a law option or omen directly
+(e.g. `INJECT:regulated_gold_export`), but the game database only indexes the *top-level* object —
+here, the law group (`precious_metal_distribution_law`) or god (`hermes_god`) that contains it — so every
+one of these silently failed with `trying to inject/replace to a non-existing entry`. That meant the
+original vanilla bonus was still zeroed out by `default_values.txt`, but the trade_income compensation
+never landed: a straight nerf with no offset, for every affected law and the `giver_of_wealth_omen`
+Hellenic omen. Fixed by nesting each injection under its real top-level parent
+(`in_game/common/laws/TE2_*.txt`, `in_game/common/gods/TE2_hellenism.txt`).
 
 ## How to verify it's working
 

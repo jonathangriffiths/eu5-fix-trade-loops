@@ -1,29 +1,36 @@
-INJECT:french_far_east_ambitions = {
-	country_modifier = {
-		trade_income = small_trade_income_bonus
+INJECT:french_colonial_ambition_focus = {
+	french_far_east_ambitions = {
+		country_modifier = {
+			trade_income = small_trade_income_bonus
+		}
+	}
+	french_east_india_company = {
+		country_modifier = {
+			trade_income = medium_trade_income_bonus
+		}
 	}
 }
 
-INJECT:french_east_india_company = {
-	country_modifier = {
-		trade_income = medium_trade_income_bonus
+INJECT:teu_amber_monopoly_law = {
+	state_controlled_amber_gathering = {
+		country_modifier = {
+			trade_income = tiny_trade_income_bonus
+		}
 	}
 }
 
-INJECT:state_controlled_amber_gathering = {
-	country_modifier = {
-		trade_income = tiny_trade_income_bonus
+INJECT:ashta_pradhan_council_law = {
+	apc_mazumdar_focus_policy = {
+		country_modifier = {
+			trade_income = small_trade_income_bonus
+		}
 	}
 }
 
-INJECT:apc_mazumdar_focus_policy = {
-	country_modifier = {
-		trade_income = small_trade_income_bonus
-	}
-}
-
-INJECT:kor_chinese_currency = {
-	country_modifier = {
-		trade_income = small_trade_income_bonus
+INJECT:kor_currency = {
+	kor_chinese_currency = {
+		country_modifier = {
+			trade_income = small_trade_income_bonus
+		}
 	}
 }

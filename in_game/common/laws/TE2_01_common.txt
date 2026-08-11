@@ -1,11 +1,15 @@
-INJECT:black_market_consortium = {
-	country_modifier = {
-		trade_income = small_trade_income_bonus
+INJECT:economical_policies_law = {
+	black_market_consortium = {
+		country_modifier = {
+			trade_income = small_trade_income_bonus
+		}
 	}
 }
 
-INJECT:regulated_gold_export = {
-	country_modifier = {
-		trade_income = tiny_trade_income_bonus
+INJECT:precious_metal_distribution_law = {
+	regulated_gold_export = {
+		country_modifier = {
+			trade_income = tiny_trade_income_bonus
+		}
 	}
 }

@@ -1,23 +1,28 @@
-INJECT:rice_based_tax = {
-	country_modifier = {
-		trade_income = small_trade_income_bonus
+INJECT:tax_base_system = {
+	rice_based_tax = {
+		country_modifier = {
+			trade_income = small_trade_income_bonus
+		}
 	}
 }
 
-INJECT:allow_trade = {
-	country_modifier = {
-		trade_income = small_trade_income_bonus
+INJECT:outwards_view = {
+	allow_trade = {
+		country_modifier = {
+			trade_income = small_trade_income_bonus
+		}
+	}
+	haijin_policy = {
+		country_modifier = {
+			trade_income = large_trade_income_penalty
+		}
 	}
 }
 
-INJECT:haijin_policy = {
-	country_modifier = {
-		trade_income = large_trade_income_penalty
-	}
-}
-
-INJECT:increase_tariff_control_decree = {
-	country_modifier = {
-		trade_income = small_trade_income_bonus
+INJECT:middle_kingdom_decrees = {
+	increase_tariff_control_decree = {
+		country_modifier = {
+			trade_income = small_trade_income_bonus
+		}
 	}
 }

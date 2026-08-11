@@ -1,5 +1,7 @@
-INJECT:shafii_policy = {
-	country_modifier = {
-		trade_income = small_trade_income_bonus
+INJECT:sharia_law = {
+	shafii_policy = {
+		country_modifier = {
+			trade_income = small_trade_income_bonus
+		}
 	}
 }
