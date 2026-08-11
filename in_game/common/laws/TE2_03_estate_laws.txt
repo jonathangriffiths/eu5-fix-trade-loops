@@ -1,7 +1,86 @@
-INJECT:burghers_rights_laws = {
+REPLACE:burghers_rights_laws = {
+	law_category = estates
 	strengthen_burghers_rights_policy = {
 		country_modifier = {
+			burghers_estate_target_satisfaction = medium_permanent_target_satisfaction
+			monthly_towards_plutocracy = societal_value_minor_monthly_move
+			global_burghers_estate_power = 0.1
+			selling_efficiency = small_trade_efficiency_bonus
 			trade_income = small_trade_income_bonus
 		}
+		estate_preferences = {
+			burghers_estate
+		}
+		years = 2
+	}
+	curtail_burghers_policy = {
+		country_modifier = {
+			burghers_estate_target_satisfaction = medium_permanent_target_satisfaction_penalty
+			global_burghers_estate_power = -0.1
+			burghers_estate_max_tax = 0.1
+			monthly_towards_centralization = societal_value_minor_monthly_move
+			burghers_estate_power_from_cabinet = -0.66
+		}
+		estate_preferences = {
+			nobles_estate
+			clergy_estate
+		}
+		years = 2
+	}
+	strong_guilds_policy = {
+		country_modifier = {
+			burghers_estate_target_satisfaction = small_permanent_target_satisfaction
+			monthly_towards_plutocracy = societal_value_minor_monthly_move
+			global_burghers_estate_power = 0.05
+			global_production_efficiency = medium_production_efficiency_bonus
+			peasants_estate_allowed_in_cabinet = yes
+		}
+		estate_preferences = {
+			burghers_estate
+			peasants_estate
+		}
+		years = 2
+	}
+	colonial_burghers_authority_policy = {
+		country_modifier = {
+			global_burghers_estate_power = 0.05
+			colonial_migration_size_modifier = 0.25
+			monthly_towards_outward = societal_value_minor_monthly_move
+		}
+		estate_preferences = {
+			burghers_estate
+		}
+		years = 2
+	}
+	increased_trade_regulations = {
+		potential = {
+			current_age_or_later = { age = age_4_reformation }
+		}
+		country_modifier = {
+			burghers_estate_target_satisfaction = medium_permanent_target_satisfaction
+			global_burghers_estate_power = 0.25
+			monthly_towards_mercantilism = societal_value_monthly_move
+			export_impact_on_demand = 0.05
+		}
+		estate_preferences = {
+			crown_estate
+			burghers_estate
+		}
+		years = 2
+	}
+	reduced_trade_regulations = {
+		potential = {
+			current_age_or_later = { age = age_4_reformation }
+		}
+		country_modifier = {
+			burghers_estate_target_satisfaction = medium_permanent_target_satisfaction
+			global_burghers_estate_power = 0.25
+			monthly_towards_free_trade = societal_value_monthly_move
+		}
+		estate_preferences = {
+			burghers_estate
+		}
+		years = 2
 	}
 }
+

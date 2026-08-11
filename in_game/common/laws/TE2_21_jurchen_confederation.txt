@@ -1,7 +1,121 @@
-INJECT:trade_relations = {
-	chinese_tribute_policy = {
+REPLACE:trade_relations = {
+	type = international_organization
+	law_category = socioeconomic
+	requires_vote = no
+	potential = {
+		international_organization_type = international_organization_type:jurchen_confederation
+	}
+	
+	locked = {
+		custom_tooltip = {
+			text = 5_years_cd
+			has_cooldown = jurchen_confederation_law_cooldown
+		}
+	}
+
+	clan_trade_only_policy = {
+		price = jurchen_confederation_law_price
+		wants_this_policy_bias = {
+			add = {
+				desc = "POLICY_BIAS_GOOD_IDEA"
+				value = 20
+			}
+		}
+		years = 5
+		on_activate = {
+			custom_tooltip = {
+				text = jurchen_confederation_law_cooldown_tt
+				add_cooldown = {
+					type = jurchen_confederation_law_cooldown
+					years = 5
+				}
+			}
+			leader_country = {
+				if = {
+					limit = {
+						ruler_or_regent ?= { has_variable = difficult_sinicization_variable }
+					}
+					add_tribal_cohesion = tribal_cohesion_mild_penalty
+					add_stability = stability_mild_penalty
+				}
+			}
+		}
+
 		country_modifier = {
+			global_trade_protection_factor = 0.1
+			monthly_towards_unsinicized = societal_value_monthly_move
+			monthly_tribal_cohesion = 0.05
+		}
+	}
+
+	allow_foreign_exchanges_policy = {
+		price = jurchen_confederation_law_price
+		wants_this_policy_bias = {
+			add = {
+				desc = "POLICY_BIAS_GOOD_IDEA"
+				value = 20
+			}
+		}
+		years = 5
+		on_activate = {
+			custom_tooltip = {
+				text = jurchen_confederation_law_cooldown_tt
+				add_cooldown = {
+					type = jurchen_confederation_law_cooldown
+					years = 5
+				}
+			}
+			leader_country = {
+				if = {
+					limit = {
+						ruler_or_regent ?= { has_variable = difficult_sinicization_variable }
+					}
+					add_tribal_cohesion = tribal_cohesion_mild_penalty
+					add_stability = stability_mild_penalty
+				}
+			}
+		}
+
+		country_modifier = {
+			monthly_towards_sinicized = societal_value_minor_monthly_move
+			burghers_estate_max_tax = 0.1
+		}
+	}
+
+	chinese_tribute_policy = {
+		price = jurchen_confederation_law_price
+		wants_this_policy_bias = {
+			add = {
+				desc = "POLICY_BIAS_GOOD_IDEA"
+				value = 20
+			}
+		}
+		years = 5
+		on_activate = {
+			custom_tooltip = {
+				text = jurchen_confederation_law_cooldown_tt
+				add_cooldown = {
+					type = jurchen_confederation_law_cooldown
+					years = 5
+				}
+			}
+			leader_country = {
+				if = {
+					limit = {
+						ruler_or_regent ?= { has_variable = difficult_sinicization_variable }
+					}
+					add_tribal_cohesion = tribal_cohesion_mild_penalty
+					add_stability = stability_mild_penalty
+				}
+			}
+		}
+
+		country_modifier = {
+			monthly_towards_sinicized = societal_value_monthly_move
+			selling_efficiency = tiny_trade_efficiency_bonus
 			trade_income = tiny_trade_income_bonus
+			market_building_levels = 5
 		}
 	}
 }
+

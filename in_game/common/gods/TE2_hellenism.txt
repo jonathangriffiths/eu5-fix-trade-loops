@@ -1,9 +1,134 @@
-INJECT:hermes_god = {
+REPLACE:hermes_god = {
+	icon = hellenism_hermes_god
+
+	ability = DIP
+
+	religion = {
+		religion = hellenism_religion
+		name_key = hermes_god
+	}
 	omens = {
-		giver_of_wealth_omen = {
+		messenger_omen = {
+			god = hermes_god
+			potential = { has_dlc = "d008_fate_of_the_phoenix" }
+
 			country_modifier = {
+				scale = {
+					value = "monarch_power_percentage_in_country(power:dip)"
+					add = 1
+				}
+				army_logistics_distance_modifier = 0.3
+			}
+		}
+		golden_wand_omen = {
+			god = hermes_god
+			potential = { has_dlc = "d008_fate_of_the_phoenix" }
+
+			country_modifier = {
+				scale = {
+					value = "monarch_power_percentage_in_country(power:dip)"
+					add = 1
+				}
+				global_trade_center_power = 0.2
+			}
+		}
+		god_of_travelers_omen = {
+			god = hermes_god
+			potential = { has_dlc = "d008_fate_of_the_phoenix" }
+
+			country_modifier = {
+				scale = {
+					value = "monarch_power_percentage_in_country(power:dip)"
+					add = 1
+				}
+				global_trade_through_owned_territory_efficiency = 0.4
+			}
+		}
+		protector_of_merchants_omen = {
+			god = hermes_god
+			potential = { has_dlc = "d008_fate_of_the_phoenix" }
+
+			country_modifier = {
+				scale = {
+					value = "monarch_power_percentage_in_country(power:dip)"
+					add = 1
+				}
+				global_trade_protection_factor = 0.25
+			}
+		}
+		wing_footed_omen = {
+			god = hermes_god
+			potential = { has_dlc = "d008_fate_of_the_phoenix" }
+
+			country_modifier = {
+				scale = {
+					value = "monarch_power_percentage_in_country(power:dip)"
+					add = 1
+				}
+				army_movement_speed = 0.2
+			}
+		}
+		trickster_omen = {
+			god = hermes_god
+			potential = { has_dlc = "d008_fate_of_the_phoenix" }
+
+			country_modifier = {
+				scale = {
+					value = "monarch_power_percentage_in_country(power:dip)"
+					add = 1
+				}
+		  		stability_cost_efficiency = 0.5
+			}
+		}
+		patron_of_thieves_omen = {
+			god = hermes_god
+			potential = { has_dlc = "d008_fate_of_the_phoenix" }
+
+			country_modifier = {
+				scale = {
+					value = "monarch_power_percentage_in_country(power:dip)"
+					add = 1
+				}
+				spy_network_construction = 0.33
+			}
+		}
+		president_of_games_omen = {
+			god = hermes_god
+			potential = { has_dlc = "d008_fate_of_the_phoenix" }
+
+			country_modifier = {
+				scale = {
+					value = "monarch_power_percentage_in_country(power:dip)"
+					add = 1
+				}
+				global_estate_satisfaction_decay = -0.05
+			}
+		}
+		guardian_of_the_gates_omen = {
+			god = hermes_god
+			potential = { has_dlc = "d008_fate_of_the_phoenix" }
+
+			country_modifier = {
+				scale = {
+					value = "monarch_power_percentage_in_country(power:dip)"
+					add = 1
+				}
+				global_defensive = 0.25
+			}
+		}
+		giver_of_wealth_omen = {
+			god = hermes_god
+			potential = { has_dlc = "d008_fate_of_the_phoenix" }
+
+			country_modifier = {
+				scale = {
+					value = "monarch_power_percentage_in_country(power:dip)"
+					add = 1
+				}
+				selling_efficiency = medium_trade_efficiency_bonus
 				trade_income = medium_trade_income_bonus
 			}
 		}
 	}
 }
+

@@ -1,15 +1,148 @@
-INJECT:economical_policies_law = {
-	black_market_consortium = {
+REPLACE:economical_policies_law = {
+	law_category = socioeconomic
+	lockean_proviso_policy = {
 		country_modifier = {
+			global_raw_material_output = 0.05
+			global_monthly_development = 0.002
+		}
+		years = 2
+	}
+	war_economy_policy = {
+		allow = {
+			modifier:ban_exports_of_firearms = no
+			modifier:ban_exports_of_cannons = no
+			modifier:ban_exports_of_weaponry = no
+		}
+		country_modifier = {
+			global_firearms_output_modifier = 0.1
+			global_cannons_output_modifier = 0.1
+			global_weaponry_output_modifier = 0.1
+			army_maintenance_efficiency = 0.1
+		}
+		estate_preferences = {
+			crown_estate
+		}
+		years = 2
+	}
+	embrace_the_economic_theory_policy = {
+		country_modifier = {
+			bank_interest = -0.01
+			monthly_inflation = -0.0005
+		}
+		estate_preferences = {
+			burghers_estate
+		}
+		years = 2
+	}
+	free_trade_policy = {
+		country_modifier = {
+			global_merchant_power = 0.1
+			monthly_towards_free_trade = societal_value_monthly_move
+		}
+		estate_preferences = {
+			burghers_estate
+		}
+		years = 2
+	}
+	royal_charter_policy = {
+		country_modifier = {
+			merchant_power_from_maritime_modifier = 0.1
+			navy_maintenance_efficiency = 0.1
+			export_impact_on_demand = 0.05
+		}
+		estate_preferences = {
+			nobles_estate
+		}
+		years = 2
+	}
+	cameralism_policy = {
+		unique = yes
+		potential = {
+			culture = { has_culture_group = culture_group:german_group }
+			has_advance = manufactories_advance
+		}
+		country_modifier = {
+			monthly_towards_land = societal_value_monthly_move
+			monthly_towards_free_subjects = societal_value_monthly_move
+			legislative_efficiency = 0.15
+			global_migration_speed_modifier = 0.1
+		}
+		estate_preferences = {
+			burghers_estate
+			peasants_estate
+		}
+		years = 2
+	}
+	black_market_consortium = {
+		unique = yes
+		potential = { has_reform = government_reform:pirate_brethren_reform }
+		country_modifier = {
+			enable_black_market_buildings = yes
+			import_efficiency = small_trade_efficiency_bonus
 			trade_income = small_trade_income_bonus
 		}
+		estate_preferences = {
+			burghers_estate
+		}
+		years = 2
 	}
 }
 
-INJECT:precious_metal_distribution_law = {
+REPLACE:precious_metal_distribution_law = {
+	law_category = socioeconomic
+	potential = {
+		OR = {
+			produced_in_country:goods_gold > 0
+			produced_in_country:silver > 0
+
+			has_law = precious_metal_distribution_law
+		}
+	}
+
+	gold_export_ban = {
+		potential = {
+			NOT = { is_subject_type = colonial_nation }
+		}
+		country_modifier = {
+			ban_exports_of_goods_gold = yes
+			ban_exports_of_silver = yes
+			global_goods_gold_output_modifier = -0.05
+			global_silver_output_modifier = -0.05
+			minting_income_factor = 0.33
+			monthly_towards_mercantilism = societal_value_tiny_monthly_move
+			export_impact_on_demand = 0.05
+		}
+		estate_preferences = {
+			nobles_estate
+		}
+		years = 2
+
+		ai_will_do = {
+			# forbid precious metal export for AI as its too hard to chicken and egg if they would get profitable exports or not
+			value = -100
+		}
+	}
 	regulated_gold_export = {
 		country_modifier = {
+			selling_efficiency = tiny_trade_efficiency_bonus
 			trade_income = tiny_trade_income_bonus
 		}
+		estate_preferences = {
+			crown_estate
+		}
+		years = 2
+	}
+	unlimited_gold_export = {
+		country_modifier = {
+			global_merchant_power = 0.1
+			global_goods_gold_output_modifier = 0.05
+			global_silver_output_modifier = 0.05
+			minting_income_factor = -0.33
+			monthly_towards_free_trade = societal_value_tiny_monthly_move
+		}
+		estate_preferences = {
+			burghers_estate
+		}
+		years = 2
 	}
 }

@@ -1,7 +1,155 @@
-INJECT:maritime_law = {
-	ara_consulate_sea = {
-		country_modifier = {
-			trade_income = small_trade_income_bonus
+REPLACE:maritime_law = {
+	law_category = military
+	potential = {
+		OR = {
+			num_of_ports > 0
+			is_merchant_republic = yes
+			
+			has_law = maritime_law
 		}
 	}
+
+	forestry_ordinance = {
+		country_modifier = {
+			global_naval_supplies_output_modifier = 0.10
+			monthly_towards_traditional_economy = societal_value_minor_monthly_move
+		}
+		estate_preferences = {
+			burghers_estate
+		}
+		years = 2
+	}	
+
+	mandatory_impressment = {
+		country_modifier = {
+			global_sailors_modifier = 0.10
+			monthly_towards_serfdom = societal_value_minor_monthly_move
+		}
+		estate_preferences = {
+			nobles_estate
+		}
+		years = 2
+	}		
+
+	navy_audits = {
+		country_modifier = {
+			navy_maintenance_efficiency = 0.1
+			monthly_towards_naval = societal_value_minor_monthly_move
+		}
+		estate_preferences = {
+			peasants_estate
+		}
+		years = 2
+	}	
+	
+	protect_trade_routes = {
+	  	country_modifier = {
+			burghers_estate_target_satisfaction = small_permanent_target_satisfaction
+			trade_range_modifier = 0.10
+			monthly_towards_free_trade = societal_value_minor_monthly_move
+		}
+		estate_preferences = {
+			burghers_estate
+		}
+		years = 2
+	}
+
+	shipwright_standard_regulation = {
+		country_modifier = {
+			ship_build_speed = 0.10
+			monthly_towards_capital_economy = societal_value_minor_monthly_move
+		}
+		estate_preferences = {
+			burghers_estate
+		}
+		years = 2
+	}
+
+	#Country Specific
+	ara_consulate_sea = {	
+		unique = yes	
+    	potential = {
+			has_or_had_tag = ARA
+			has_unlocked_policy_trigger = { type = ara_consulate_sea }
+		}
+		country_modifier = {
+			selling_efficiency = small_trade_efficiency_bonus
+			trade_income = small_trade_income_bonus
+			global_merchant_power = 0.1
+			monthly_towards_naval = societal_value_monthly_move
+		}
+		estate_preferences = {
+			burghers_estate
+		}
+		years = 2
+	}
+
+	nav_maritime_code = {
+		unique = yes
+    	potential = {
+			has_or_had_tag = NAV
+		}
+    	allow = {
+			
+		}
+		country_modifier = {
+			monthly_navy_tradition = 0.05
+			global_sailors_modifier = 0.25
+			monthly_towards_naval = societal_value_monthly_move
+		}
+		estate_preferences = {
+			burghers_estate
+			peasants_estate
+		}
+		years = 2
+	}
+
+	kilwan_merchant_navy = {
+		unique = yes
+		potential = {
+			has_or_had_tag = ZAN
+		}
+
+		country_modifier = {
+			navy_light_ship_maintenance_cost_modifier = -0.25
+			global_naval_supplies_output_modifier = 0.1
+			monthly_towards_naval = societal_value_monthly_move
+		}
+		estate_preferences = {
+			burghers_estate
+		}
+		years = 2
+	}
+
+	smugglers_haven = {
+		unique = yes		
+		potential = {
+			has_reform = government_reform:pirate_brethren_reform
+		}
+
+		country_modifier = {
+			global_maritime_presence_modifier = 0.1
+			navy_light_ship_maintenance_cost_modifier = -0.25
+		}
+		estate_preferences = {
+			burghers_estate
+		}
+		years = 2
+	}
+
+	act_of_navigation = {
+		unique = yes
+        potential = {
+			has_unlocked_policy_trigger = { type = act_of_navigation }
+		}
+
+		country_modifier = {
+			global_trades_per_burgher = 0.25
+			monthly_towards_mercantilism = societal_value_monthly_move
+		}
+		estate_preferences = { burghers_estate }
+		years = 2
+	}
+
 }
+

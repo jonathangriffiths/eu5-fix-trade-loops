@@ -25,8 +25,43 @@ never landed: a straight nerf with no offset, for every affected law and the `gi
 Hellenic omen. Fixed by nesting each injection under its real top-level parent
 (`in_game/common/laws/TE2_*.txt`, `in_game/common/gods/TE2_hellenism.txt`).
 
+**Third bug (found via a player report of duplicate law entries):** the fix for the second bug made
+those 16 injections succeed, but per Paradox's own documented `INJECT:` behaviour, `INJECT:` *appends*
+script to an object rather than merging it by key — see the [Mod structure wiki's `wargoal_scores`
+example](https://eu5.paradoxwikis.com/Mod_structure#Inject_and_replace). That's harmless when the
+injected key is a plain modifier container (`country_modifier`, `capital_country_modifier`, etc.),
+since multiple such blocks on one entity simply sum — which is exactly what makes the ~47-object fix
+above safe. It's not harmless when the injected key is itself the *name of an existing, selectable
+policy or omen* inside a law/god container: appending a second block with that name creates a second,
+visibly duplicate entry in the law/omen choice list (e.g. two identical "Regulated Gold Export"
+options), because policies aren't deduplicated by name the way modifier fields are.
+
+Fixed by switching these 14 law objects (and `hermes_god`) from `INJECT:` to `REPLACE:`, which fully
+replaces the top-level object instead of appending to it. Since `REPLACE:`/`INJECT:` can only target
+top-level blocks (not a nested sub-block), each fix required copying that law/god's complete vanilla
+definition into the mod file with the `trade_income` line merged directly into the existing policy's
+`country_modifier` — see `in_game/common/laws/TE2_*.txt` and `in_game/common/gods/TE2_hellenism.txt`.
+The tradeoff: unlike the rest of the mod, these 14 objects embed a full copy of vanilla content and
+will need re-syncing if Paradox changes these specific laws/omens in a future patch.
+
 ## How to verify it's working
 
 Easiest check, no setup needed: open the country modifier breakdown and look at the
 **Aristocracy vs Plutocracy**, **Mercantilism vs Free Trade**, or **Latinization vs Hellenization**
 societal value sliders — each now contributes a Trade Income modifier. Confirmed working.
+
+To verify the third-bug fix specifically (no duplicate law/omen entries), check any of these at or
+near the 1337 start:
+
+- **Precious Metal Distribution** law (any country producing gold or silver, e.g. Mali or Castile):
+  "Regulated Gold Export" should appear **once**, with Trade Income in its tooltip.
+- **Estate Laws → Burghers' Rights** (any monarchy with a Burghers estate): "Strengthen Burghers'
+  Rights" should appear once, with Trade Income added.
+- **Legal System** law for a Sunni country following the Shafi'i school: "Shafi'i" policy should
+  appear once, with Trade Income added.
+- **Tariff Control decree**, visible to whichever country currently leads the Middle Kingdom
+  international organization (China, from the 1337 start): should appear once.
+
+As a contrast, check a *building* like Pisa's unique **Porto Pisano** — it correctly shows as a
+single building with both effects (zeroed selling efficiency + Trade Income) combined in one
+tooltip, because building modifiers aren't a named-choice list like law policies are.

@@ -1,36 +1,290 @@
-INJECT:french_colonial_ambition_focus = {
+REPLACE:french_colonial_ambition_focus = {
+	unique = yes
+
+	law_category = socioeconomic
+	potential = {
+		has_variable = enable_fra_colonial_ambitions
+	}
+
+	french_mercantile_colonies = { # New World
+		country_modifier = {
+			colonial_migration_size_modifier = 0.5
+			colonial_maintenance_efficiency = 0.16
+			create_colonial_charter_cost_modifier = -0.2
+			monthly_towards_mercantilism = societal_value_tiny_monthly_move
+		}
+		estate_preferences = {
+			burghers_estate
+		}
+		years = 2
+	}
+
 	french_far_east_ambitions = {
 		country_modifier = {
+			global_foreign_build_buildings_efficiency = 0.4
+			colonial_range_modifier = 0.25
+			merchant_power_from_maritime_modifier = 0.05
+			selling_efficiency = small_trade_efficiency_bonus
 			trade_income = small_trade_income_bonus
 		}
-	}
-	french_east_india_company = {
-		country_modifier = {
-			trade_income = medium_trade_income_bonus
+		estate_preferences = {
+			burghers_estate
 		}
+		years = 2
+	}
+
+	french_east_india_company = { #unlocked by flavor_fra.373
+		potential = {
+			has_unlocked_policy_trigger = { type = french_east_india_company }
+		}
+		country_modifier = {
+			selling_efficiency = medium_trade_efficiency_bonus
+			trade_income = medium_trade_income_bonus
+			tolerance_heathen = 1.5
+			global_foreign_build_buildings_efficiency = 0.4
+			colonial_range_modifier = 0.33
+			merchant_power_from_maritime_modifier = 0.10
+		}
+		estate_preferences = {
+			burghers_estate
+		}
+		years = 2
 	}
 }
 
-INJECT:teu_amber_monopoly_law = {
+REPLACE:teu_amber_monopoly_law = {
+	unique = yes
+	law_category = socioeconomic
+
+	potential = {
+		has_unlocked_law_trigger = {
+			type = teu_amber_monopoly_law
+		}
+	}
+
 	state_controlled_amber_gathering = {
 		country_modifier = {
+			selling_efficiency = tiny_trade_efficiency_bonus
 			trade_income = tiny_trade_income_bonus
+			monthly_towards_aristocracy = societal_value_minor_monthly_move
 		}
+		location_modifier = {
+			potential_trigger = {
+				raw_material = goods:amber
+			}
+			local_crown_estate_power = 2
+		}
+		estate_preferences = {
+			crown_estate
+		}
+		years = 2
+	}
+
+	burghers_controlled_amber_gathering = {
+		country_modifier = {
+			global_merchant_capacity_modifier = 0.1
+			monthly_towards_free_trade = societal_value_minor_monthly_move
+		}
+		location_modifier = {
+			potential_trigger = {
+				raw_material = goods:amber
+			}
+			local_burghers_estate_power = 2
+		}
+		estate_preferences = {
+			burghers_estate
+		}
+		years = 2
+	}
+
+	peasant_controlled_amber_gathering = {
+		country_modifier = {
+			monthly_towards_free_subjects = societal_value_minor_monthly_move
+			global_amber_output_modifier = 0.25
+		}
+		location_modifier = {
+			potential_trigger = {
+				raw_material = goods:amber
+			}
+			local_peasants_estate_power = 2
+		}
+		estate_preferences = {
+			peasants_estate
+		}
+		years = 2
 	}
 }
 
-INJECT:ashta_pradhan_council_law = {
+REPLACE:ashta_pradhan_council_law = {
+	unique = yes
+	law_category = administrative
+	potential = {
+		modifier:has_ashta_pradham_council_policies = yes
+	}
+	apc_peshwa_focus_policy = {
+		country_modifier = {
+			global_integration_speed_modifier = 0.1
+			legislative_efficiency = 0.1
+		}
+		estate_preferences = {
+			clergy_estate
+		}
+		years = 2
+	}
 	apc_mazumdar_focus_policy = {
 		country_modifier = {
+			tax_income_efficiency = large_tax_income_efficiency_bonus
+			selling_efficiency = small_trade_efficiency_bonus
 			trade_income = small_trade_income_bonus
 		}
+		estate_preferences = {
+			nobles_estate
+		}
+		years = 2
+	}
+	apc_sacheev_focus_policy = {
+		country_modifier = {
+			global_estate_power = -0.1
+			global_estate_target_satisfaction = medium_permanent_target_satisfaction
+		}
+		estate_preferences = {
+			crown_estate
+		}
+		years = 2
+	}
+	apc_waqia_navis_focus_policy = {
+		country_modifier = {
+			counter_espionage = 0.33
+			antagonism_received_modifier = -0.1
+		}
+		estate_preferences = {
+			crown_estate
+		}
+		years = 2
+	}
+	apc_senapati_focus_policy = {
+		country_modifier = {
+			discipline = 0.05
+			monthly_army_tradition = 0.03
+		}
+		estate_preferences = {
+			nobles_estate
+		}
+		years = 2
+	}
+	apc_dabir_focus_policy = {
+		country_modifier = {
+			diplomatic_reputation = diplomatic_reputation_weak_bonus
+			improve_relation_impact = 0.2
+		}
+		estate_preferences = {
+			crown_estate
+		}
+		years = 2
+	}
+	apc_nyayadhish_focus_policy = {
+		country_modifier = {
+			global_monthly_control = 0.001
+			global_estate_target_satisfaction = small_permanent_target_satisfaction
+		}
+		estate_preferences = {
+			peasants_estate
+		}
+		years = 2
+	}
+	apc_panditrao_focus_policy = {
+		country_modifier = {
+			global_pop_conversion_speed_modifier = 0.1
+			global_monthly_literacy = 0.01
+		}
+		estate_preferences = {
+			clergy_estate
+		}
+		years = 2
 	}
 }
 
-INJECT:kor_currency = {
-	kor_chinese_currency = {
+REPLACE:kor_currency = {
+	unique = yes
+	law_category = socioeconomic
+
+	potential = {
+		has_unlocked_law_trigger = {
+			type = kor_currency
+		}
+	}
+	kor_barter_economy = {
 		country_modifier = {
+			scale = {
+				add = {
+					desc = capital_economy_vs_traditional_economy
+					value = societal_value:capital_economy_vs_traditional_economy
+					multiply = 0.01
+					min = 0
+				}
+			}
+			trade_land_efficiency = large_trade_land_efficiency_bonus
+		}
+		country_modifier = {
+			monthly_towards_traditional_economy = societal_value_minor_monthly_move
+		}
+		years = 2
+	}
+	kor_metal_coinage = {
+		country_modifier = {
+			minting_inflation_threshold = 0.01
+		}
+		years = 2
+	}
+	kor_jeohwa = {
+		allow = {
+			capital.market = {
+				"stockpile_in_market(goods:paper)" > 20
+			}
+		}
+
+		country_modifier = {
+			# global_paper_output_modifier = 0.05
+			monthly_towards_capital_economy = societal_value_monthly_move
+		}
+		country_modifier = {
+			scale = {
+				add = {
+					desc = capital_economy_vs_traditional_economy
+					value = societal_value:capital_economy_vs_traditional_economy
+					multiply = -1
+					min = 0
+				}
+			}
+			bank_interest = -0.0001
+		}
+
+		on_activate = {
+			capital.market = {
+				add_goods_supply = {
+					amount = -20
+					goods = goods:paper
+				}
+			}
+		}
+		years = 2
+	}
+	kor_chinese_currency = {
+		potential = {
+			country_exists = c:CHI
+		}
+		country_modifier = {
+			scale = {
+				add = {
+					desc = "kor_scale_chinese_currency"
+					value = "c:CHI.opinion(root)"
+					multiply = 0.01
+				}
+			}
+
+			selling_efficiency = small_trade_efficiency_bonus
 			trade_income = small_trade_income_bonus
 		}
+		years = 2
 	}
 }
