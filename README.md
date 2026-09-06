@@ -44,6 +44,20 @@ definition into the mod file with the `trade_income` line merged directly into t
 The tradeoff: unlike the rest of the mod, these 14 objects embed a full copy of vanilla content and
 will need re-syncing if Paradox changes these specific laws/omens in a future patch.
 
+**Fourth bug (found via a player report of Mercury's empty omen menu):** the third-bug fix copied
+`hermes_god`'s complete vanilla `omens` block (all 10 omens) into the `REPLACE:hermes_god` body so
+the `giver_of_wealth_omen` change would survive the replace. But omens aren't just a nested field —
+they're independently key-checked by the engine's persistent object reader regardless of the parent
+god's `REPLACE:`, so redeclaring the 9 *unmodified* omens collided with the copies vanilla's
+`hellenism.txt` had already registered. `error.log` showed `Already exists` for all 10 omens
+(including `giver_of_wealth_omen` itself), and since every omen in the block failed, Mercury was left
+with no omens at all.
+
+Fixed by dropping the 9 untouched omens from the copy (they stay correctly registered from vanilla —
+`hermes_god` doesn't need to redeclare them) and adding `REPLACE:` directly on the one nested key that
+actually changes: `omens = { REPLACE:giver_of_wealth_omen = { ... } }`. This is a smaller blast radius
+than the third-bug fix and only needs updating if `giver_of_wealth_omen` itself changes upstream.
+
 ## How to verify it's working
 
 Easiest check, no setup needed: open the country modifier breakdown and look at the
@@ -65,3 +79,8 @@ near the 1337 start:
 As a contrast, check a *building* like Pisa's unique **Porto Pisano** — it correctly shows as a
 single building with both effects (zeroed selling efficiency + Trade Income) combined in one
 tooltip, because building modifiers aren't a named-choice list like law policies are.
+
+To verify the fourth-bug fix, follow a Hellenic-religion Greek nation to Mercury's omen menu: it
+should show all 10 omens (not empty), with **Giver of Wealth** including both Selling Efficiency and
+Trade Income in its tooltip. Also check `error.log` after loading — no more `Already exists` entries
+for `messenger_omen`, `golden_wand_omen`, etc.
