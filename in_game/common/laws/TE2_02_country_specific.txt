@@ -25,7 +25,7 @@ REPLACE:french_colonial_ambition_focus = {
 			colonial_range_modifier = 0.25
 			merchant_power_from_maritime_modifier = 0.05
 			selling_efficiency = small_trade_efficiency_bonus
-			trade_income = small_trade_income_bonus
+			merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 		}
 		estate_preferences = {
 			burghers_estate
@@ -39,7 +39,7 @@ REPLACE:french_colonial_ambition_focus = {
 		}
 		country_modifier = {
 			selling_efficiency = medium_trade_efficiency_bonus
-			trade_income = medium_trade_income_bonus
+			merchant_maintenance_efficiency = medium_merchant_maintenance_efficiency_bonus
 			tolerance_heathen = 1.5
 			global_foreign_build_buildings_efficiency = 0.4
 			colonial_range_modifier = 0.33
@@ -65,7 +65,7 @@ REPLACE:teu_amber_monopoly_law = {
 	state_controlled_amber_gathering = {
 		country_modifier = {
 			selling_efficiency = tiny_trade_efficiency_bonus
-			trade_income = tiny_trade_income_bonus
+			merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
 			monthly_towards_aristocracy = societal_value_minor_monthly_move
 		}
 		location_modifier = {
@@ -135,7 +135,7 @@ REPLACE:ashta_pradhan_council_law = {
 		country_modifier = {
 			tax_income_efficiency = large_tax_income_efficiency_bonus
 			selling_efficiency = small_trade_efficiency_bonus
-			trade_income = small_trade_income_bonus
+			merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 		}
 		estate_preferences = {
 			nobles_estate
@@ -283,7 +283,7 @@ REPLACE:kor_currency = {
 			}
 
 			selling_efficiency = small_trade_efficiency_bonus
-			trade_income = small_trade_income_bonus
+			merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 		}
 		years = 2
 	}

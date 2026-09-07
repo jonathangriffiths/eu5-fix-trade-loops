@@ -1,20 +1,20 @@
 INJECT:aristocracy_vs_plutocracy = {
 	right_modifier = {
-		trade_income = small_trade_income_bonus
+		merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 	}
 }
 
 INJECT:mercantilism_vs_free_trade = {
 	left_modifier = {
-		trade_income = small_trade_income_penalty
+		merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_penalty
 	}
 	right_modifier = {
-		trade_income = small_trade_income_bonus
+		merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 	}
 }
 
 INJECT:latinization_vs_hellenization = {
 	left_modifier = {
-		trade_income = small_trade_income_bonus
+		merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 	}
 }

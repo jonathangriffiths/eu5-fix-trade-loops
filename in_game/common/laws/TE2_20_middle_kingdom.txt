@@ -64,7 +64,7 @@ REPLACE:tax_base_system = {
 				is_leader_of_international_organization = international_organization:middle_kingdom 
 			}
 			selling_efficiency = small_trade_efficiency_bonus
-			trade_income = small_trade_income_bonus
+			merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 		}
 		country_modifier = {
 			#Celestial Governor benefits
@@ -264,7 +264,7 @@ REPLACE:outwards_view = {
 				is_leader_of_international_organization = international_organization:middle_kingdom 
 			}
 			selling_efficiency = small_trade_efficiency_bonus
-			trade_income = small_trade_income_bonus
+			merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 			sea_cost_on_distance_from_capital_when_maritime = -0.5
 		}
 		country_modifier = {
@@ -347,7 +347,7 @@ REPLACE:outwards_view = {
 			}
 			global_maritime_presence_modifier = 0.2
 			import_efficiency = large_trade_efficiency_penalty
-			trade_income = large_trade_income_penalty
+			merchant_maintenance_efficiency = large_merchant_maintenance_efficiency_penalty
 			trade_isolation = yes
 			monthly_towards_inward =  societal_value_monthly_move
 			monthly_towards_mercantilism = societal_value_monthly_move
@@ -464,7 +464,7 @@ REPLACE:middle_kingdom_decrees = {
 	increase_tariff_control_decree = {
 		country_modifier = { #Change if the actual modifier is changed
 			selling_efficiency = small_trade_efficiency_bonus
-			trade_income = small_trade_income_bonus
+			merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 			scale = {
 				value = 1
 				add = {

@@ -1,7 +1,7 @@
 INJECT:blg_la_grasa = {
-	trade_income = small_trade_income_bonus
+	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:par_prosciutto_e_parmigiano = {
-	trade_income = medium_trade_income_bonus
+	merchant_maintenance_efficiency = medium_merchant_maintenance_efficiency_bonus
 }

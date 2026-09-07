@@ -1,41 +1,41 @@
 INJECT:novgorod_ivans_hundred = {
 	country_modifier = {
-		trade_income = small_trade_income_bonus
+		merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 	}
 }
 
 INJECT:kbo_lake_chad_trade_privilege = {
 	country_modifier = {
-		trade_income = tiny_trade_income_bonus
+		merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
 	}
 }
 
 INJECT:noble_patronage = {
 	country_modifier = {
-		trade_income = tiny_trade_income_bonus
+		merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
 	}
 }
 
 INJECT:polish_merchant_seal = {
 	country_modifier = {
-		trade_income = tiny_trade_income_bonus
+		merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
 	}
 }
 
 INJECT:fra_leadership_of_marcel = {
 	country_modifier = {
-		trade_income = small_trade_income_bonus
+		merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 	}
 }
 
 INJECT:consolidated_corruption_of_the_burghers = {
 	country_modifier = {
-		trade_income = large_trade_income_penalty
+		merchant_maintenance_efficiency = large_merchant_maintenance_efficiency_penalty
 	}
 }
 
 INJECT:mam_muhtasibs = {
 	country_modifier = {
-		trade_income = tiny_trade_income_bonus
+		merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
 	}
 }

@@ -1,23 +1,23 @@
 INJECT:kor_daedongbeob = {
 	country_modifier = {
-		trade_income = small_trade_income_bonus
+		merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 	}
 }
 
 INJECT:kor_sadae_reform = {
 	country_modifier = {
-		trade_income = medium_trade_income_bonus
+		merchant_maintenance_efficiency = medium_merchant_maintenance_efficiency_bonus
 	}
 }
 
 INJECT:dutch_republic_reform = {
 	country_modifier = {
-		trade_income = small_trade_income_bonus
+		merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 	}
 }
 
 INJECT:shahana_i_mandi = {
 	country_modifier = {
-		trade_income = small_trade_income_bonus
+		merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 	}
 }

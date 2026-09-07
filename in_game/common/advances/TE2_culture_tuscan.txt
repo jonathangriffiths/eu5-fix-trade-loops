@@ -1,7 +1,7 @@
 INJECT:pis_maritimes_legacy = {
-	trade_income = medium_trade_income_bonus
+	merchant_maintenance_efficiency = medium_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:flo_florentine_merchant_houses = {
-	trade_income = medium_trade_income_bonus
+	merchant_maintenance_efficiency = medium_merchant_maintenance_efficiency_bonus
 }

@@ -1,3 +1,3 @@
 INJECT:fc_hre_privileges = {
-	trade_income = tiny_trade_income_bonus
+	merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
 }

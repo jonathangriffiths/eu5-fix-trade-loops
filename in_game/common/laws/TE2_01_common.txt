@@ -79,7 +79,7 @@ REPLACE:economical_policies_law = {
 		country_modifier = {
 			enable_black_market_buildings = yes
 			import_efficiency = small_trade_efficiency_bonus
-			trade_income = small_trade_income_bonus
+			merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 		}
 		estate_preferences = {
 			burghers_estate
@@ -125,7 +125,7 @@ REPLACE:precious_metal_distribution_law = {
 	regulated_gold_export = {
 		country_modifier = {
 			selling_efficiency = tiny_trade_efficiency_bonus
-			trade_income = tiny_trade_income_bonus
+			merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
 		}
 		estate_preferences = {
 			crown_estate

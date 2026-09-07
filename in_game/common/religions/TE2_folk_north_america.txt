@@ -1,23 +1,23 @@
 INJECT:inuit_religion = {
 	definition_modifier = {
-		trade_income = small_trade_income_bonus
+		merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 	}
 }
 
 INJECT:dene_religion = {
 	definition_modifier = {
-		trade_income = small_trade_income_bonus
+		merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 	}
 }
 
 INJECT:midewiwin_religion = {
 	definition_modifier = {
-		trade_income = small_trade_income_bonus
+		merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 	}
 }
 
 INJECT:totemism = {
 	definition_modifier = {
-		trade_income = small_trade_income_bonus
+		merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 	}
 }

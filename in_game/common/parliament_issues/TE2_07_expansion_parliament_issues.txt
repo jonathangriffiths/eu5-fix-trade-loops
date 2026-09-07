@@ -1,17 +1,17 @@
 INJECT:establish_import_controls = {
 	modifier_when_in_debate = {
-		trade_income = tiny_trade_income_bonus
+		merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
 	}
 }
 
 INJECT:establish_commodity_exchange = {
 	modifier_when_in_debate = {
-		trade_income = tiny_trade_income_bonus
+		merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
 	}
 }
 
 INJECT:establish_customs_houses = {
 	modifier_when_in_debate = {
-		trade_income = tiny_trade_income_bonus
+		merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
 	}
 }

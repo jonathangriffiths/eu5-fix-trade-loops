@@ -6,7 +6,7 @@ REPLACE:burghers_rights_laws = {
 			monthly_towards_plutocracy = societal_value_minor_monthly_move
 			global_burghers_estate_power = 0.1
 			selling_efficiency = small_trade_efficiency_bonus
-			trade_income = small_trade_income_bonus
+			merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 		}
 		estate_preferences = {
 			burghers_estate

@@ -4,7 +4,9 @@ A patched copy of the EU5 Workshop mod ["Fix Trading Loops"](https://steamcommun
 by **Rikkert** (`Rikkerd_01`) — all credit for the original design to them.
 
 **What it does:** removes vanilla's flat trade efficiency bonuses (which enable exploitative
-"trade loops") and redirects that value into Trade Income instead.
+"trade loops") and redirects that value into `merchant_maintenance_efficiency` instead — a
+same-stage replacement that reduces route maintenance cost rather than reintroducing a
+sale/purchase-price modifier.
 
 ## Trade maths
 
@@ -59,34 +61,36 @@ the number shown for the crown's share. So `trade_income` increases the crown's 
 pool directly, rather than growing the pool itself. `merchant_maintenance_efficiency` doesn't touch
 this stage at all (it only ever affects Stage 1's `TradeMaintenance` term).
 
-### Option A: keep redirecting into `trade_income` (Stage 3, current approach)
+### Why `merchant_maintenance_efficiency`
 
-- Hits Stage 3: directly increases the crown's share of the Stage 2 trade income pool (shown in the
-  trade panel as "Trade Income Share"). Its ducat value scales with the size of the Stage 2 pool —
-  i.e. with how much trade income a country already earns — not with trade capacity or route count.
-- Additive across sources — no diminishing returns as more `trade_income` modifiers stack.
-- Vanilla already uses it this way in several places, e.g. the Merchant Republic government reform
-  (`government_reforms/republic.txt`) grants `trade_income = 0.20` alongside its other bonuses.
+This mod redirects the removed value into `merchant_maintenance_efficiency` — Stage 1, the same
+stage as the exploit it's compensating for — rather than into `trade_income` (Stage 3). Reducing
+route maintenance cost scales with trade capacity actually in use, so a country running many
+routes gets a proportionally larger saving than one running few, tying the compensation to trade
+activity rather than making it government/playstyle-agnostic. It also never touches `SaleValue` or
+`PurchaseCost`, so it can't recreate the same-price-arbitrage loop the mod is fixing.
 
-### Option B: redirect into `merchant_maintenance_efficiency` instead (Stage 1, Omnislip's suggestion)
+The reciprocal formula (`TradeMaintenance_actual = TradeMaintenance_base / (1 +
+merchant_maintenance_efficiency)`) gives diminishing returns as sources stack — going from 100% to
+200% efficiency only moves cost reduction from 50% to 66%, not from 50% to 100% — so there's a
+mathematical ceiling on how much any single route's maintenance can be reduced no matter how many
+sources apply. These are the tiny/small/medium/large/huge values used and their relative cost 
+reductions:
 
-- Hits Stage 1: reduces the `TradeMaintenance` term on every route. Its ducat value scales with
-  trade capacity actually in use, not with income.
-- Reciprocal formula gives diminishing returns as it stacks (going from 100% to 200% efficiency only
-  moves cost reduction from 50% to 66%, not from 50% to 100%).
-- Already used by vanilla in several places, stacking with the ~47 objects this mod would add to:
-  - Merchant Republic government reform: `merchant_maintenance_efficiency = 0.50` (same block as its
-    `trade_income = 0.20` and `global_merchant_capacity_modifier = 0.50`)
-  - `global_trade_advance`: `0.20`
-  - `development_of_maritime_law` advance: `0.20`
-  - `mercantilism_vs_free_trade` societal value (one extreme): `0.20`
-  - Novgorod's `ivans_hundred` estate privilege: `0.50`
-  - `bank_ledgers_system` government reform: `0.40`
+| value | cost reduction (`value / (1 + value)`) |
+|------:|----------------------------------------:|
+| 0.025 | 2.4% |
+| 0.05  | 4.8% |
+| 0.1   | 9.1% |
+| 0.2   | 16.7% |
+| 0.5   | 33.3% |
+
+Though note that returns will diminish the more you stack.
 
 ## Why the files aren't all structured the same way
 
 Most objects (~47: laws, buildings, estate privileges, religions, societal values) use a plain
-`INJECT:object = { country_modifier = { trade_income = X } }`, nested at the right depth. That's
+`INJECT:object = { country_modifier = { merchant_maintenance_efficiency = X } }`, nested at the right depth. That's
 safe because modifier blocks just sum — multiple injections on one entity combine fine.
 
 14 law files and `TE2_hellenism.txt` are different: the actual target is a named policy/omen
@@ -102,17 +106,18 @@ rather than replacing the whole block, because omens are independently key-check
 regardless of the parent's `REPLACE:` — redeclaring unmodified sibling omens would collide with
 vanilla's own registration of them (`Already exists` errors).
 
-All tunable numbers live in `main_menu/common/script_values/TE2_trade_income_scale.txt`.
+All tunable numbers live in `main_menu/common/script_values/TE2_merchant_maintenance_scale.txt`.
 
 ## How to verify it's working
 
 Open the country modifier breakdown and check **Aristocracy vs Plutocracy**, **Mercantilism vs
-Free Trade**, or **Latinization vs Hellenization** — each should show a Trade Income modifier.
+Free Trade**, or **Latinization vs Hellenization** — each should show a Merchant Maintenance
+Efficiency modifier.
 
 For the `REPLACE:` law fixes, confirm no duplicate entries appear, e.g.:
 
 - **Precious Metal Distribution** law (gold/silver producer, e.g. Mali or Castile): "Regulated Gold
-  Export" appears once, with Trade Income in its tooltip.
+  Export" appears once, with Merchant Maintenance Efficiency in its tooltip.
 - **Estate Laws → Burghers' Rights** (monarchy with Burghers estate): appears once.
 - **Legal System** law (Sunni, Shafi'i school): "Shafi'i" appears once.
 - **Tariff Control decree** (Middle Kingdom leader, e.g. China at 1337 start): appears once.
@@ -121,5 +126,5 @@ Contrast with a building like Pisa's **Porto Pisano**, which correctly shows bot
 in one tooltip (buildings aren't a named-choice list).
 
 For the omen fix: a Hellenic Greek nation's Mercury omen menu should show all 10 omens, with
-**Giver of Wealth** including both Selling Efficiency and Trade Income. Check `error.log` for no
-`Already exists` entries.
+**Giver of Wealth** including both Selling Efficiency and Merchant Maintenance Efficiency. Check
+`error.log` for no `Already exists` entries.

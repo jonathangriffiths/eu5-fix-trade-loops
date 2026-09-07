@@ -1,19 +1,19 @@
 INJECT:difficulty_player_very_easy = {
-	trade_income = large_trade_income_bonus
+	merchant_maintenance_efficiency = large_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:difficulty_player_easy = {
-	trade_income = medium_trade_income_bonus
+	merchant_maintenance_efficiency = medium_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:difficulty_ai_normal = {
-	trade_income = small_trade_income_bonus
+	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:difficulty_ai_hard = {
-	trade_income = medium_trade_income_bonus
+	merchant_maintenance_efficiency = medium_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:difficulty_ai_very_hard = {
-	trade_income = large_trade_income_bonus
+	merchant_maintenance_efficiency = large_merchant_maintenance_efficiency_bonus
 }

@@ -1,5 +1,5 @@
 INJECT:entrepreneur = {
 	modifier = {
-		trade_income = small_trade_income_bonus
+		merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 	}
 }

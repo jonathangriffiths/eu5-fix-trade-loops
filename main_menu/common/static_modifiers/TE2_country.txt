@@ -1,263 +1,263 @@
 INJECT:court_language_is_market_language = {
-	trade_income = small_trade_income_bonus
+	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:reduced_trade_investments = {
-	trade_income = small_trade_income_penalty
+	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_penalty
 }
 
 INJECT:ahi_bureaucrats = {
-	trade_income = tiny_trade_income_bonus
+	merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:chi_chinese_rule = {
-	trade_income = small_trade_income_bonus
+	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:smugglers_dominating = {
-	trade_income = small_trade_income_penalty
+	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_penalty
 }
 
 INJECT:si_state_smuggling = {
-	trade_income = tiny_trade_income_bonus
+	merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:si_better_exports = {
-	trade_income = tiny_trade_income_bonus
+	merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:trade_and_production_cutbacks = {
-	trade_income = small_trade_income_penalty
+	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_penalty
 }
 
 INJECT:severe_trade_crisis = {
-	trade_income = medium_trade_income_penalty
+	merchant_maintenance_efficiency = medium_merchant_maintenance_efficiency_penalty
 }
 
 INJECT:bad_free_trade_merchants = {
-	trade_income = small_trade_income_penalty
+	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_penalty
 }
 
 INJECT:business_booming = {
-	trade_income = small_trade_income_bonus
+	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:out_of_date_commerce = {
-	trade_income = small_trade_income_penalty
+	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_penalty
 }
 
 INJECT:trade_collapse = {
-	trade_income = medium_trade_income_penalty
+	merchant_maintenance_efficiency = medium_merchant_maintenance_efficiency_penalty
 }
 
 INJECT:trade_success = {
-	trade_income = tiny_trade_income_bonus
+	merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:trade_failure = {
-	trade_income = small_trade_income_penalty
+	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_penalty
 }
 
 INJECT:nanban_dependent_on_imports = {
-	trade_income = tiny_trade_income_penalty
+	merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_penalty
 }
 
 INJECT:shinto_religious_tensions = {
-	trade_income = small_trade_income_bonus
+	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:shinto_strengthened_local_traders = {
-	trade_income = small_trade_income_bonus
+	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:fra_colbertism = {
-	trade_income = tiny_trade_income_bonus
+	merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:fra_colbertism_economic_focus = {
-	trade_income = small_trade_income_bonus
+	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:fra_eden_agreement = {
-	trade_income = small_trade_income_bonus
+	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:fra_eden_agreement_eng = {
-	trade_income = tiny_trade_income_bonus
+	merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:fra_enterprising_nobles = {
-	trade_income = tiny_trade_income_bonus
+	merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:fra_john_law_national_bank = {
-	trade_income = tiny_trade_income_bonus
+	merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:fra_john_law_mississippi_company = {
-	trade_income = small_trade_income_bonus
+	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:fra_fleury_naval_reallocation = {
-	trade_income = small_trade_income_bonus
+	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:fra_fleury_maritime_bonus = {
-	trade_income = small_trade_income_bonus
+	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:fra_fleury_france_land_prosperity = {
-	trade_income = small_trade_income_bonus
+	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:sco_strong_wool_trade = {
-	trade_income = huge_trade_income_bonus
+	merchant_maintenance_efficiency = huge_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:meissen_groschen = {
-	trade_income = tiny_trade_income_bonus
+	merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:south_sea_bubble = {
-	trade_income = medium_trade_income_penalty
+	merchant_maintenance_efficiency = medium_merchant_maintenance_efficiency_penalty
 }
 
 INJECT:restructuring = {
-	trade_income = large_trade_income_penalty
+	merchant_maintenance_efficiency = large_merchant_maintenance_efficiency_penalty
 }
 
 INJECT:no_market_for_goods = {
-	trade_income = large_trade_income_penalty
+	merchant_maintenance_efficiency = large_merchant_maintenance_efficiency_penalty
 }
 
 INJECT:byz_reliance_on_italian_navies = {
-	trade_income = tiny_trade_income_penalty
+	merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_penalty
 }
 
 INJECT:byz_mercantile_self_reliance_modifier = {
-	trade_income = tiny_trade_income_bonus
+	merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:teu_wrath_of_the_pirates = {
-	trade_income = large_trade_income_penalty
+	merchant_maintenance_efficiency = large_merchant_maintenance_efficiency_penalty
 }
 
 INJECT:peranakan_trading_rights_restriction = {
-	trade_income = medium_trade_income_penalty
+	merchant_maintenance_efficiency = medium_merchant_maintenance_efficiency_penalty
 }
 
 INJECT:maj_muslim_aid = {
-	trade_income = tiny_trade_income_bonus
+	merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:dan_defeated_hansa = {
-	trade_income = tiny_trade_income_bonus
+	merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:dan_dominium_maris_baltici = {
-	trade_income = tiny_trade_income_bonus
+	merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:mal_searching_lost_expedition = {
-	trade_income = tiny_trade_income_penalty
+	merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_penalty
 }
 
 INJECT:foreign_coinage_ban = {
-	trade_income = medium_trade_income_penalty
+	merchant_maintenance_efficiency = medium_merchant_maintenance_efficiency_penalty
 }
 
 INJECT:mam_bedoin_warfare_severe = {
-	trade_income = large_trade_income_penalty
+	merchant_maintenance_efficiency = large_merchant_maintenance_efficiency_penalty
 }
 
 INJECT:mam_bedoin_warfare = {
-	trade_income = medium_trade_income_penalty
+	merchant_maintenance_efficiency = medium_merchant_maintenance_efficiency_penalty
 }
 
 INJECT:ori_decline_of_trade = {
-	trade_income = large_trade_income_penalty
+	merchant_maintenance_efficiency = large_merchant_maintenance_efficiency_penalty
 }
 
 INJECT:consolidated_trade_modifier = {
-	trade_income = medium_trade_income_bonus
+	merchant_maintenance_efficiency = medium_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:smugglers_struggling_modifier = {
-	trade_income = small_trade_income_penalty
+	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_penalty
 }
 
 INJECT:free_trade_of_goods = {
-	trade_income = small_trade_income_bonus
+	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:trade_with_neighbor = {
-	trade_income = small_trade_income_bonus
+	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:traders_look_abroad = {
-	trade_income = medium_trade_income_bonus
+	merchant_maintenance_efficiency = medium_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:increased_tariff_control = {
-	trade_income = small_trade_income_bonus
+	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:nov_benefits_of_peterhof = {
-	trade_income = tiny_trade_income_bonus
+	merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:nov_reliance_on_other_currencies = {
-	trade_income = medium_trade_income_bonus
+	merchant_maintenance_efficiency = medium_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:nov_beeswax_and_fur_trade = {
-	trade_income = medium_trade_income_bonus
+	merchant_maintenance_efficiency = medium_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:mission_trade_focus_modifier = {
-	trade_income = medium_trade_income_bonus
+	merchant_maintenance_efficiency = medium_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:lessors_from_the_port_of_martaban_modifier = {
-	trade_income = medium_trade_income_bonus
+	merchant_maintenance_efficiency = medium_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:new_capital_economy = {
-	trade_income = medium_trade_income_bonus
+	merchant_maintenance_efficiency = medium_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:profit_dividents_modifier = {
-	trade_income = medium_trade_income_bonus
+	merchant_maintenance_efficiency = medium_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:parl_colonial_admin_mod = {
-	trade_income = tiny_trade_income_bonus
+	merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:parl_export_trade_mod = {
-	trade_income = small_trade_income_bonus
+	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:parl_import_controls_mod = {
-	trade_income = small_trade_income_bonus
+	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:parl_trade_expeditions_mod = {
-	trade_income = tiny_trade_income_bonus
+	merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:parl_commodity_exchange_mod = {
-	trade_income = small_trade_income_bonus
+	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:parl_trading_companies_mod = {
-	trade_income = tiny_trade_income_bonus
+	merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:parl_customs_houses_mod = {
-	trade_income = small_trade_income_bonus
+	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:parl_grain_imports_mod = {
-	trade_income = tiny_trade_income_bonus
+	merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
 }

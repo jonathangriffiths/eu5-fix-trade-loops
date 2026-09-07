@@ -1,7 +1,7 @@
 INJECT:tepeilhuitl_mass = {
-	trade_income = small_trade_income_bonus
+	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 }
 
 INJECT:tepeilhuitl_gr = {
-	trade_income = tiny_trade_income_bonus
+	merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
 }

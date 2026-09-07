@@ -1,0 +1,42 @@
+# Fix Trading Loops - tunable balance constants
+#
+# Every INJECT across this mod that compensates a removed trade_efficiency
+# bonus/penalty (see default_values.txt, where tiny/small/medium/large/huge
+# _trade_efficiency_bonus/penalty are all zeroed) references one of the
+# named values below instead of a hardcoded number. Change a value here and
+# every object that uses that tier updates together - no need to hunt
+# through advances/laws/buildings/etc. individually.
+#
+# Tiers are NOT copied from vanilla's trade_efficiency scale (0.01-0.2).
+# Because merchant_maintenance_efficiency feeds a reciprocal formula
+# (actual = base / (1 + value)) rather than adding flat to sale/purchase
+# value, we instead derived this scale from vanilla's own
+# merchant_maintenance_efficiency usage across advances/reforms/privileges/
+# societal values: real vanilla sources cluster at roughly 0.05, 0.10, 0.20,
+# 0.40 and 0.50, with 0.50 as the hard ceiling nothing in vanilla exceeds.
+# Those raw clusters compress at the top end (0.40->0.50 is only +25%,
+# vs. a clean x2 for the lower steps) because the reciprocal formula makes
+# each extra 0.1 above ~0.4 buy very little extra real cost reduction - see
+# the README's cost-reduction table. To keep a clean, predictable x2-ish
+# progression while still anchoring both ends to real vanilla data (0.05
+# floor, 0.5 ceiling), we compress the bottom instead of stretching the top:
+# 0.025 / 0.05 / 0.1 / 0.2 / 0.5. Note 0.025 itself isn't attested as a
+# merchant_maintenance_efficiency bonus anywhere in vanilla (only as a
+# penalty, and as a trade_efficiency tier) - it's a deliberate "smaller than
+# anything vanilla bothers with" tiny tier, not a reused vanilla data point.
+
+tiny_merchant_maintenance_efficiency_bonus = 0.025
+small_merchant_maintenance_efficiency_bonus = 0.05
+medium_merchant_maintenance_efficiency_bonus = 0.1
+large_merchant_maintenance_efficiency_bonus = 0.2
+huge_merchant_maintenance_efficiency_bonus = 0.5
+
+tiny_merchant_maintenance_efficiency_penalty = -0.025
+small_merchant_maintenance_efficiency_penalty = -0.05
+medium_merchant_maintenance_efficiency_penalty = -0.1
+large_merchant_maintenance_efficiency_penalty = -0.2
+huge_merchant_maintenance_efficiency_penalty = -0.5
+
+# Unused by any current INJECT (kept for parity with vanilla's
+# scaled_trade_efficiency_penalty), sized to match the tiny tier.
+scaled_merchant_maintenance_efficiency_penalty = -0.025

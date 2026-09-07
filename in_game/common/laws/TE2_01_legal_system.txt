@@ -104,7 +104,7 @@ REPLACE:sharia_law = {
 
 		country_modifier = {
 			selling_efficiency = small_trade_efficiency_bonus
-			trade_income = small_trade_income_bonus
+			merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 			monthly_towards_free_trade = societal_value_minor_monthly_move
 		}
 		years = 2
