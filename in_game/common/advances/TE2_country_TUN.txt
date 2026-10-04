@@ -1,3 +1,0 @@
-INJECT:saharan_trade = {
-	merchant_maintenance_efficiency = medium_merchant_maintenance_efficiency_bonus
-}

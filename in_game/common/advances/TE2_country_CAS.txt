@@ -1,0 +1,15 @@
+INJECT:jae_olive_presses = {
+	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
+}
+
+INJECT:crd_cordwainer_guilds = {
+	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
+}
+
+INJECT:tol_toledan_steel = {
+	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
+}
+
+INJECT:sev_jabon_works = {
+	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
+}

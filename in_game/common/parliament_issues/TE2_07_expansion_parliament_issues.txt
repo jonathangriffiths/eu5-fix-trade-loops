@@ -1,9 +1,3 @@
-INJECT:establish_import_controls = {
-	modifier_when_in_debate = {
-		merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
-	}
-}
-
 INJECT:establish_commodity_exchange = {
 	modifier_when_in_debate = {
 		merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus

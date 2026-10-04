@@ -73,10 +73,12 @@ REPLACE:maritime_law = {
 			has_unlocked_policy_trigger = { type = ara_consulate_sea }
 		}
 		country_modifier = {
-			selling_efficiency = small_trade_efficiency_bonus
+			selling_efficiency = small_selling_efficiency_bonus
 			merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 			global_merchant_power = 0.1
 			monthly_towards_naval = societal_value_monthly_move
+			unlocked_consulate_sea_town_right = yes
+			pure_tooltip_entry = unlocks_fondaco_rights_tt
 		}
 		estate_preferences = {
 			burghers_estate

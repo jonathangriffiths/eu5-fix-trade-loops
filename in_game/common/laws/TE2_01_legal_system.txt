@@ -103,7 +103,7 @@ REPLACE:sharia_law = {
 		}
 
 		country_modifier = {
-			selling_efficiency = small_trade_efficiency_bonus
+			selling_efficiency = small_selling_efficiency_bonus
 			merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 			monthly_towards_free_trade = societal_value_minor_monthly_move
 		}
@@ -192,4 +192,5 @@ REPLACE:sharia_law = {
 		}
 		years = 2
 	}
+
 }

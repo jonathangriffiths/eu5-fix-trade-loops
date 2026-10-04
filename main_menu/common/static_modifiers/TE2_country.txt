@@ -238,10 +238,6 @@ INJECT:parl_export_trade_mod = {
 	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 }
 
-INJECT:parl_import_controls_mod = {
-	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
-}
-
 INJECT:parl_trade_expeditions_mod = {
 	merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
 }
@@ -258,6 +254,53 @@ INJECT:parl_customs_houses_mod = {
 	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 }
 
-INJECT:parl_grain_imports_mod = {
+INJECT:calicut_trade_rights = {
+	merchant_maintenance_efficiency = medium_merchant_maintenance_efficiency_bonus
+}
+
+INJECT:cape_route_established = {
 	merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
+}
+
+INJECT:cape_route_pioneer = {
+	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
+}
+
+INJECT:east_africa_trade_dominance = {
+	merchant_maintenance_efficiency = medium_merchant_maintenance_efficiency_bonus
+}
+
+INJECT:first_circumnavigation = {
+	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
+}
+
+INJECT:gold_coast_feitoria = {
+	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
+}
+
+INJECT:manila_galleon_route = {
+	merchant_maintenance_efficiency = medium_merchant_maintenance_efficiency_bonus
+}
+
+INJECT:mozambique_trading_rights = {
+	merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
+}
+
+INJECT:portuguese_african_network = {
+	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
+}
+
+INJECT:southern_return_route = {
+	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
+}
+
+# import_efficiency here uses a trade_sea_efficiency tier, which is not zeroed
+# in default_values.txt, so the whole modifier is replaced with that line swapped.
+REPLACE:asian_trade_boom_modifier = {
+	game_data = {
+		category = country
+	}
+	global_merchant_power = 0.2
+	global_foreign_build_buildings_efficiency = 0.5
+	merchant_maintenance_efficiency = medium_merchant_maintenance_efficiency_bonus
 }

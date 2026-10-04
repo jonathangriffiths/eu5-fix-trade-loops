@@ -18,6 +18,7 @@ REPLACE:economical_policies_law = {
 			global_cannons_output_modifier = 0.1
 			global_weaponry_output_modifier = 0.1
 			army_maintenance_efficiency = 0.1
+			max_tariff = 0.15
 		}
 		estate_preferences = {
 			crown_estate
@@ -38,6 +39,7 @@ REPLACE:economical_policies_law = {
 		country_modifier = {
 			global_merchant_power = 0.1
 			monthly_towards_free_trade = societal_value_monthly_move
+			max_tariff = -0.1
 		}
 		estate_preferences = {
 			burghers_estate
@@ -49,6 +51,7 @@ REPLACE:economical_policies_law = {
 			merchant_power_from_maritime_modifier = 0.1
 			navy_maintenance_efficiency = 0.1
 			export_impact_on_demand = 0.05
+			max_trade_subventions = 0.1
 		}
 		estate_preferences = {
 			nobles_estate
@@ -66,6 +69,8 @@ REPLACE:economical_policies_law = {
 			monthly_towards_free_subjects = societal_value_monthly_move
 			legislative_efficiency = 0.15
 			global_migration_speed_modifier = 0.1
+			max_tariff = 0.1
+			max_trade_subventions = 0.1
 		}
 		estate_preferences = {
 			burghers_estate
@@ -94,7 +99,7 @@ REPLACE:precious_metal_distribution_law = {
 		OR = {
 			produced_in_country:goods_gold > 0
 			produced_in_country:silver > 0
-
+			
 			has_law = precious_metal_distribution_law
 		}
 	}
@@ -124,7 +129,7 @@ REPLACE:precious_metal_distribution_law = {
 	}
 	regulated_gold_export = {
 		country_modifier = {
-			selling_efficiency = tiny_trade_efficiency_bonus
+			selling_efficiency = tiny_selling_efficiency_bonus
 			merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
 		}
 		estate_preferences = {

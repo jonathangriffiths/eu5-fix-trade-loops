@@ -17,7 +17,7 @@ REPLACE:hermes_god = {
 					value = "monarch_power_percentage_in_country(power:dip)"
 					add = 1
 				}
-				selling_efficiency = medium_trade_efficiency_bonus
+				selling_efficiency = medium_selling_efficiency_bonus
 				merchant_maintenance_efficiency = medium_merchant_maintenance_efficiency_bonus
 			}
 		}

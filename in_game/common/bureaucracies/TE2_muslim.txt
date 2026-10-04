@@ -1,0 +1,5 @@
+INJECT:hisba_bureaucracy = {
+	positive_modifier = {
+		merchant_maintenance_efficiency = medium_merchant_maintenance_efficiency_bonus
+	}
+}

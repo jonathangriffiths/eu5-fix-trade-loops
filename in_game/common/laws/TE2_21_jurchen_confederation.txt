@@ -112,9 +112,9 @@ REPLACE:trade_relations = {
 
 		country_modifier = {
 			monthly_towards_sinicized = societal_value_monthly_move
-			selling_efficiency = tiny_trade_efficiency_bonus
+			selling_efficiency = tiny_selling_efficiency_bonus
 			merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
-			market_building_levels = 5
+			market_building_levels = 0.5
 		}
 	}
 }

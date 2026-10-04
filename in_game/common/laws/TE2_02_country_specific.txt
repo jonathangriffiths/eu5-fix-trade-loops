@@ -24,7 +24,7 @@ REPLACE:french_colonial_ambition_focus = {
 			global_foreign_build_buildings_efficiency = 0.4
 			colonial_range_modifier = 0.25
 			merchant_power_from_maritime_modifier = 0.05
-			selling_efficiency = small_trade_efficiency_bonus
+			selling_efficiency = small_selling_efficiency_bonus
 			merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 		}
 		estate_preferences = {
@@ -38,22 +38,23 @@ REPLACE:french_colonial_ambition_focus = {
 			has_unlocked_policy_trigger = { type = french_east_india_company }
 		}
 		country_modifier = {
-			selling_efficiency = medium_trade_efficiency_bonus
+			selling_efficiency = medium_selling_efficiency_bonus
 			merchant_maintenance_efficiency = medium_merchant_maintenance_efficiency_bonus
 			tolerance_heathen = 1.5
 			global_foreign_build_buildings_efficiency = 0.4
 			colonial_range_modifier = 0.33
-			merchant_power_from_maritime_modifier = 0.10
+			merchant_power_from_maritime_modifier = 0.10			
 		}
 		estate_preferences = {
 			burghers_estate
 		}
 		years = 2
 	}
+	
 }
 
 REPLACE:teu_amber_monopoly_law = {
-	unique = yes
+		unique = yes
 	law_category = socioeconomic
 
 	potential = {
@@ -64,7 +65,7 @@ REPLACE:teu_amber_monopoly_law = {
 
 	state_controlled_amber_gathering = {
 		country_modifier = {
-			selling_efficiency = tiny_trade_efficiency_bonus
+			selling_efficiency = tiny_selling_efficiency_bonus
 			merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
 			monthly_towards_aristocracy = societal_value_minor_monthly_move
 		}
@@ -134,7 +135,7 @@ REPLACE:ashta_pradhan_council_law = {
 	apc_mazumdar_focus_policy = {
 		country_modifier = {
 			tax_income_efficiency = large_tax_income_efficiency_bonus
-			selling_efficiency = small_trade_efficiency_bonus
+			selling_efficiency = small_selling_efficiency_bonus
 			merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 		}
 		estate_preferences = {
@@ -207,11 +208,11 @@ REPLACE:ashta_pradhan_council_law = {
 REPLACE:kor_currency = {
 	unique = yes
 	law_category = socioeconomic
-
+	
 	potential = {
 		has_unlocked_law_trigger = {
 			type = kor_currency
-		}
+		}	
 	}
 	kor_barter_economy = {
 		country_modifier = {
@@ -242,7 +243,7 @@ REPLACE:kor_currency = {
 				"stockpile_in_market(goods:paper)" > 20
 			}
 		}
-
+		
 		country_modifier = {
 			# global_paper_output_modifier = 0.05
 			monthly_towards_capital_economy = societal_value_monthly_move
@@ -265,13 +266,13 @@ REPLACE:kor_currency = {
 					amount = -20
 					goods = goods:paper
 				}
-			}
+			}	
 		}
 		years = 2
 	}
 	kor_chinese_currency = {
 		potential = {
-			country_exists = c:CHI
+			country_exists = c:CHI	
 		}
 		country_modifier = {
 			scale = {
@@ -282,7 +283,7 @@ REPLACE:kor_currency = {
 				}
 			}
 
-			selling_efficiency = small_trade_efficiency_bonus
+			selling_efficiency = small_selling_efficiency_bonus
 			merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
 		}
 		years = 2

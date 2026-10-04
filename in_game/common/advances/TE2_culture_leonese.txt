@@ -1,0 +1,7 @@
+INJECT:atu_cider_orchards = {
+	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
+}
+
+INJECT:lon_bierzo_vineyards = {
+	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
+}

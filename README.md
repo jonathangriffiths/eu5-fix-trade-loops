@@ -36,7 +36,8 @@ Route profit = SaleValue × (1 + selling_efficiency [+ export_efficiency if sell
   grants `import_efficiency = small_trade_efficiency_penalty` on its Mercantilism side, which 
   appears in the Age of Reformation.
 - All three pull their bonus/penalty size from the same shared script values,
-  `tiny…huge_trade_efficiency_bonus/penalty`.
+  `tiny…huge_trade_efficiency_bonus/penalty` and `tiny…huge_selling_efficiency_bonus/penalty`
+  (1.4 split the selling tiers out; `default_values.txt` zeroes both families).
 - **`merchant_maintenance_efficiency`** only touches `TradeMaintenance` (base cost `-0.25` per trade
   capacity used), via the same reciprocal formula EU5 uses for army/navy maintenance efficiency:
   `TradeMaintenance_actual = TradeMaintenance_base / (1 + merchant_maintenance_efficiency)`. It never
@@ -89,11 +90,11 @@ Though note that returns will diminish the more you stack.
 
 ## Why the files aren't all structured the same way
 
-Most objects (~47: laws, buildings, estate privileges, religions, societal values) use a plain
+Most objects (laws, buildings, estate privileges, religions, societal values) use a plain
 `INJECT:object = { country_modifier = { merchant_maintenance_efficiency = X } }`, nested at the right depth. That's
 safe because modifier blocks just sum — multiple injections on one entity combine fine.
 
-14 law files and `TE2_hellenism.txt` are different: the actual target is a named policy/omen
+The `REPLACE:` law files and `TE2_hellenism.txt` are different: the actual target is a named policy/omen
 *inside* a law group or god object, not the top-level object itself, and `REPLACE:`/`INJECT:` can
 only target top-level objects. `INJECT:` on the top-level object would append a second copy of that
 policy/omen rather than merging into it, creating a visible duplicate entry. So these files instead
@@ -128,3 +129,17 @@ in one tooltip (buildings aren't a named-choice list).
 For the omen fix: a Hellenic Greek nation's Mercury omen menu should show all 10 omens, with
 **Giver of Wealth** including both Selling Efficiency and Merchant Maintenance Efficiency. Check
 `error.log` for no `Already exists` entries.
+
+## Keeping it in sync with game patches
+
+`REPLACE:` copies and the `default_values.txt` copy go stale when Paradox patches the game (1.4 changed
+tariff caps, tier names and more). `tools/mod_sync.py` handles this:
+
+- `python3 tools/mod_sync.py check` — lists stale `REPLACE:` objects, `INJECT`s whose target is gone or
+  no longer grants an efficiency bonus, vanilla objects with efficiency fields the mod doesn't cover, and
+  full-file overrides. Set `EU5_GAME` if the game isn't in the default Steam path.
+- `python3 tools/mod_sync.py regen --write` — rebuilds every top-level `REPLACE:` object from the
+  installed game files and re-adds the merchant maintenance line. `hermes_god` and
+  `asian_trade_boom_modifier` are hand-maintained and skipped.
+
+`default_values.txt` is re-copied from vanilla with only the trade/selling efficiency tiers set to 0.

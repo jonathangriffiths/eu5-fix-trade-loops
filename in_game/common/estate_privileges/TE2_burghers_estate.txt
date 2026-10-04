@@ -39,3 +39,9 @@ INJECT:mam_muhtasibs = {
 		merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
 	}
 }
+
+INJECT:ara_catalan_lingua_franca = {
+	country_modifier = {
+		merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
+	}
+}

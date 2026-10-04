@@ -3,3 +3,9 @@ INJECT:porto_pisano = {
 		merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
 	}
 }
+
+INJECT:al_qaysariyya_market = {
+	capital_country_modifier = {
+		merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
+	}
+}
