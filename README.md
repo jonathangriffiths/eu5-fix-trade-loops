@@ -1,5 +1,13 @@
 # Fix Trading Loops
 
+> **Not intended for use past EU5 1.4.** In 1.4 the selling efficiency modifier tiers were doubled
+> (0.02–0.4, up from roughly 0.01–0.2), and the game's own description of Selling Efficiency now says
+> it is applied to the *difference* between purchase cost and sale price ("It only benefits profitable
+> trades") rather than to the whole sale value. Selling efficiency can no longer create
+> same-price arbitrage loops, and this mod's removal of it (and compensation for it) is no longer
+> justified. This is based on the localization text, not a tested formula. Export and import efficiency
+> are unchanged, so they could still cause this problem -- but I haven't tested it.
+
 A patched copy of the EU5 Workshop mod ["Fix Trading Loops"](https://steamcommunity.com/sharedfiles/filedetails/?id=3664872597)
 by **Rikkert** (`Rikkerd_01`) — all credit for the original design to them.
 
