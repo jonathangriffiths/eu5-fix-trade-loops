@@ -1,5 +1,0 @@
-INJECT:office_of_the_farima_soura_privilege = {
-	country_modifier = {
-		merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
-	}
-}

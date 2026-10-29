@@ -1,3 +1,0 @@
-INJECT:crossroads_of_commerce = {
-	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
-}

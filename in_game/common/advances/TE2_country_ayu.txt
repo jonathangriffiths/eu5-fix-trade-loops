@@ -1,3 +1,0 @@
-INJECT:ayu_cosmopolitan_trade = {
-	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
-}

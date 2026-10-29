@@ -1,3 +1,0 @@
-INJECT:maj_maritime_silk_road = {
-	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
-}

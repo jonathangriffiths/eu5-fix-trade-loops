@@ -1,3 +1,0 @@
-INJECT:lombard_silk_masters = {
-	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
-}

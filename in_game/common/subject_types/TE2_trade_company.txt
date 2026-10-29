@@ -1,5 +1,0 @@
-INJECT:trade_company = {
-	subject_modifier = {
-		merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
-	}
-}

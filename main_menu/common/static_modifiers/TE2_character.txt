@@ -1,3 +1,0 @@
-INJECT:protecting_against_slave_trade = {
-	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_penalty
-}

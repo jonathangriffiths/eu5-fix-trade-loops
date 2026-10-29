@@ -1,3 +1,0 @@
-INJECT:sca_sound_toll = {
-	merchant_maintenance_efficiency = medium_merchant_maintenance_efficiency_bonus
-}

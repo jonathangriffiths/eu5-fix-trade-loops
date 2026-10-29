@@ -1,3 +1,0 @@
-INJECT:img_supreme_ruler_of_tokaido = {
-	merchant_maintenance_efficiency = medium_merchant_maintenance_efficiency_bonus
-}

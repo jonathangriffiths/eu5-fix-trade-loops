@@ -1,3 +1,0 @@
-INJECT:frankokratia_levantine_trades_advance = {
-	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
-}

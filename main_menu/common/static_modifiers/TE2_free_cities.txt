@@ -1,3 +1,0 @@
-INJECT:fc_hre_privileges = {
-	merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
-}

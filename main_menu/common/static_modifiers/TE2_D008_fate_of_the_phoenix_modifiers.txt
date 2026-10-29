@@ -1,7 +1,0 @@
-INJECT:byzantine_market_dominance_modifier = {
-	merchant_maintenance_efficiency = medium_merchant_maintenance_efficiency_bonus
-}
-
-INJECT:italian_merchant_taxes_modifier = {
-	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
-}

@@ -1,7 +1,0 @@
-INJECT:pis_maritimes_legacy = {
-	merchant_maintenance_efficiency = medium_merchant_maintenance_efficiency_bonus
-}
-
-INJECT:flo_florentine_merchant_houses = {
-	merchant_maintenance_efficiency = medium_merchant_maintenance_efficiency_bonus
-}

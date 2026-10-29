@@ -1,3 +1,0 @@
-INJECT:piedmontese_the_nebbiolo_vigne = {
-	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
-}

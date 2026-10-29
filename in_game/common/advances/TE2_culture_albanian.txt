@@ -1,3 +1,0 @@
-INJECT:mtr_the_trade_monopolies = {
-	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
-}

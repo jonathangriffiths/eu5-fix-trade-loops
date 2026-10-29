@@ -1,3 +1,0 @@
-INJECT:port_of_aden = {
-	merchant_maintenance_efficiency = medium_merchant_maintenance_efficiency_bonus
-}

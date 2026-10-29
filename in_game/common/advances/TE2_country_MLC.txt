@@ -1,3 +1,0 @@
-INJECT:congregation_of_merchants = {
-	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
-}

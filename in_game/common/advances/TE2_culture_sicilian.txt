@@ -1,3 +1,0 @@
-INJECT:sic_the_marsala_wine_industry = {
-	merchant_maintenance_efficiency = medium_merchant_maintenance_efficiency_bonus
-}

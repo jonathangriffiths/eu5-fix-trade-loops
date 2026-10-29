@@ -1,7 +1,0 @@
-INJECT:blg_la_grasa = {
-	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
-}
-
-INJECT:par_prosciutto_e_parmigiano = {
-	merchant_maintenance_efficiency = medium_merchant_maintenance_efficiency_bonus
-}

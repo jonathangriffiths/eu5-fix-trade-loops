@@ -1,3 +1,0 @@
-INJECT:a_trading_hub = {
-	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
-}

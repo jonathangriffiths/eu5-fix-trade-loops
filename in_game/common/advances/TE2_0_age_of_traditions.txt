@@ -1,7 +1,0 @@
-INJECT:trade_advance_age_of_trad = {
-	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
-}
-
-INJECT:talented_traders = {
-	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
-}

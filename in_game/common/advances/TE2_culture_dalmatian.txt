@@ -1,3 +1,0 @@
-INJECT:dal_the_union_of_the_two_souls = {
-	merchant_maintenance_efficiency = medium_merchant_maintenance_efficiency_bonus
-}

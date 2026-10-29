@@ -1,3 +1,0 @@
-INJECT:ven_stato_da_mar = {
-	merchant_maintenance_efficiency = small_merchant_maintenance_efficiency_bonus
-}

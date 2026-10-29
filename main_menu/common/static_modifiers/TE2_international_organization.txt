@@ -1,7 +1,0 @@
-INJECT:guelphs_sanction_emperor_modifier = {
-	merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_penalty
-}
-
-INJECT:ghibellines_sanction_pope_modifier = {
-	merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_penalty
-}

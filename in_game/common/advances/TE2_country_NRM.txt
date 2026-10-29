@@ -1,3 +1,0 @@
-INJECT:trade_ports_in_the_channel = {
-	merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
-}

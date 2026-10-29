@@ -1,3 +1,0 @@
-INJECT:zan_diplomacy_through_trade = {
-	merchant_maintenance_efficiency = tiny_merchant_maintenance_efficiency_bonus
-}
